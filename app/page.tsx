@@ -1,4 +1,5 @@
-import Sections from "@/components/Common/Sections";
+import Community from "@/components/Common/Community";
+import Main from "@/components/Common/Main";
 import Nav from "@/components/Header/Nav";
 
 export default function Home() {
@@ -6,7 +7,8 @@ export default function Home() {
     <>
       <Nav />
       <main>
-        <Sections />
+        <Main />
+        <Community />
       </main>
     </>
   );
