@@ -9,9 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        
+      },
+      keyframes: {
+        textShow: {
+          '0%': { backgroundColor: "transparent" },
+          '100%': { backgroundColor: "#4e5968" }
+        },
+      },
+      animation: {
+        textShow: 'textShow .5s ease',
       },
     },
   },
