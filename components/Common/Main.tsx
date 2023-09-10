@@ -25,7 +25,7 @@ const Main = (props: Props) => {
         </div>
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div className="mt-[150px] flex flex-col items-center justify-start whitespace-pre-wrap">
-            <h1 className="text-[60px] font-[700] text-center leading-normal">금융의 모든것<br/>토스에서 쉽고 간편하게</h1>
+            <h1 className="text-[60px] font-[700] text-center leading-normal">마케팅의 모든것<br/>토스에서 쉽고 간편하게</h1>
             {/* <div className="w-[100px]">카카오톡 친구채널</div> */}
           </div>
           <button className="flex justify-center mb-[20px]" onClick={isArrowDown}>

@@ -18,4 +18,11 @@
 
 body {
   scroll-behavior: smooth;
+  font-family: "Pretendard", sans-serif;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: url("/fonts/Pretendard-Medium.woff") format("truetype");
 }
