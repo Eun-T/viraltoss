@@ -1,5 +1,6 @@
 import Explanation from "@/components/Common/Explanation";
 import Main from "@/components/Common/Main";
+import Secret from "@/components/Common/Secret";
 import Service from "@/components/Common/Service";
 import UpArrow from "@/components/Common/UpArrow";
 import Waiting from "@/components/Common/Waiting";
@@ -21,6 +22,7 @@ export default function Home() {
         <Youtuber />
         <Service />
         <Waiting />
+        <Secret />
       </main>
     </>
   );

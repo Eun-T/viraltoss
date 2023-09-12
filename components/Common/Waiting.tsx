@@ -5,7 +5,7 @@ type Props = {}
 const Waiting = (props: Props) => {
   return (
     <section className='w-full'>
-      <div className='w-[92%] max-w-[1140px] mx-auto relative py-[80px] px-[70px] bg-[#f4f4f4] rounded-[30px]'>
+      <div className='w-[92%] max-w-[1140px] mx-auto relative py-[80px] px-[70px] bg-[#fff] rounded-[30px]'>
         <p className='text-center text-[45px] font-[700] mb-[60px]'>수많은 커뮤니티가 당신을 기다리고 있습니다</p>
         <div className='flex flex-wrap justify-center gap-[40px]'>
           <div className='w-[135px] hover:-translate-y-[20px] duration-700'>

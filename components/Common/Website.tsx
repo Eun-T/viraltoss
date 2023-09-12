@@ -1,6 +1,33 @@
+"use client"
+
 import React from "react";
+import { motion, MotionProps, Variants } from 'framer-motion';
+import Image from "next/image";
 
 type Props = {};
+
+type MotionedDivProps = {
+  children: React.ReactNode;
+  className?: string;
+} & MotionProps;
+
+function MotionedDiv({ children, ...rest }: MotionedDivProps) {
+  return <motion.div {...rest}>{children}</motion.div>;
+}
+
+const cardVariants: Variants = {
+  offscreen: {
+    x: -100
+  },
+  onscreen: {
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+};
 
 const Website = (props: Props) => {
   return (
@@ -11,9 +38,19 @@ const Website = (props: Props) => {
           <h1 className="text-[50px] font-[700]">바이럴 마케팅,<br/>적합한 파트너를<br/>구하기 힘들어요.</h1>
         </div>
         <div className="flex relative items-start justify-between -z-[1]">
-          <div className="w-[480px] translate-y-[150px]">
-            <img src="/images/namo (6).png" alt="" className="w-full" />
-          </div>
+          <MotionedDiv
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* <Image className="w-14 bg-white" src={logo} alt="logo" /> */}
+            <Image className="w-[400px] bg-white" src={"/images/namo (6).png"} alt="namo" fill objectFit="cover" objectPosition="top"/>
+            {/* <img src="/images/namo (6).png" alt="" className="w-full" /> */}
+          </MotionedDiv>
+            {/* <div className="w-[480px] translate-y-[150px]">
+              <img src="/images/namo (6).png" alt="" className="w-full" />
+            </div> */}
+
           <div className="w-[480px] -translate-y-[180px]">
             <img src="/images/namo (6).png" alt="" className="w-full" />
           </div>

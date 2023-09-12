@@ -26,7 +26,7 @@ const Nav = () => {
   
   return (
     // bg-white
-    <nav className={"w-full h-[60px] fixed top-0 bg-white z-10 " + (scrolled ? 'border-b-[rgba(0,27,55,0.1)] border-b-[1px]' : '')}>
+    <nav className={"w-full h-[60px] fixed top-0 bg-white z-20 " + (scrolled ? 'border-b-[rgba(0,27,55,0.1)] border-b-[1px]' : '')}>
       <div className="w-[92%] max-w-[1140px] mx-auto flex items-center justify-between h-full">
         <div>logo</div>
         <div className="h-full ">
