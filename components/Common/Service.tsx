@@ -1,15 +1,24 @@
 import React from 'react'
+import Outbox from './Outbox'
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+
 
 type Props = {}
 
 const Service = (props: Props) => {
   return (
-    <section className='w-full bg-[#f4f4f4] py-[150px]'>
+    <section className='w-full bg-[#f4f4f4] py-[150px] relative'>
+      <Outbox />
       <div className='w-[92%] max-w-[1140px] mx-auto'>
       <div className='mb-[80px]'>
           <p className='text-center text-[40px] font-[700] mb-[50px]'>소규모 자영업자를 위한 All-in-one 패키지</p>
           <div className='w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap'>
-              <div className='w-[360px] bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer'>
+              <div className='w-[360px] bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative'>
+                <div className='absolute w-full h-full hover:bg-black hover:opacity-50 z-20 duration-500'>
+                  <div className='absolute text-white opacity-0 hover:opacity-100 pointer-events-auto top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2'>
+                        <AiOutlinePlusCircle />
+                  </div>
+                </div>
                 <div className='w-full h-[220px] relative overflow-hidden'>
                   <div className='w-full h-full opacity-25 absolute bg-black pointer-events-none z-10'></div>
                   <img src="images/blog1.jpg" alt="" className='w-full h-full object-contain object-center hover:scale-110 duration-500'/>
@@ -19,6 +28,7 @@ const Service = (props: Props) => {
                   <p>바이럴 영역의 활발한 경쟁 속에서 블로그 마케팅은 경쟁이 점점 치열해지고 있습니다. 따라서 광고효과를 기대하기 어려워지고 있지만 타겟에 맞는 인플루언서를 매칭하여 양질의 블로그 컨텐츠를 제작해 드립니다.</p>
                   {/* <p>바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.</p> */}
                 </div>
+                {/* <Outbox /> */}
               </div>
               <div className='w-[360px] bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer'>
                 <div className='w-full h-[220px] relative'>
