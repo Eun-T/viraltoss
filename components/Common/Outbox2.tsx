@@ -5,52 +5,62 @@ type Props = {}
 // 3. 솔직하고 정직하게
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
 
-const Outbox = (props: Props) => {
+const Outbox2 = (props: Props) => {
   return (
     <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
-      <div className='w-full h-full bg-black opacity-60 absolute'></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
+      <div className='w-full h-full bg-black opacity-50 absolute'></div>
+      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
         <div className='absolute top-0 right-[30px]'>x</div>
+        <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
         <div className='w-[60%] bg--500'>
           <div className='break-keep'>
-            <h4 className='text-[22px] font-[700]'>블로그 마케팅이란?</h4>
+            <h4 className='text-[22px] font-[700]'>네이버 파워링크/스마트플레이스</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[5px]'>
-                대다수의 자영업자들이 블로그 마케팅의 필요성을 느끼고 활용하고 있습니다.<br />
-                그러나 마케팅의 효과를 극대화하려면 어떻게 해야 할까요? 
-                바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
+            <h5 className='mb-[7px]'>
+              파워링크와 스마트플레이스는 네이버 마케팅에서 필수적인 구성 요소입니다.<br />
+              엄청난 효과를 내기보다는 브랜드 이미지와 전문성을 강조할 수 있기에 선택이 아닌 필수가 되는거죠
+              그렇다면 바이럴토스는 어떻게 업무를 진행할까요?
             </h5>
-            <span className='font-[600] text-[18px]'>1. 절대로 외부업제를 사용하지 않습니다</span>
-            <h5 className='mb-[5px]'>
-                - 다른 바이럴 회사들이 <span className='text-red-500'>'블로그 상위노출 100%'</span>라고 광고하는 경우가 많습니다. 하지만 이는 틀렸습니다.
-                서울대,카이스트 등 한국 최고의 대학 출신 석박사들이 개발한 프로그램을 뚫고 상위노출이 100% 가능할 거라고 생각하십니까?
-                블로그의 최상단 노출은 오로지 네이버의 로직 시스템에 의해 결정됩니다. 따라서 시스템의 기준을 충족시키는 것이 핵심입니다. 이 과정을 상세히 설명하고 질의응답 시간을 가집니다.<br />
+            <span className='font-[600] text-[18px]'>1. 마케팅 용어 설명</span>
+            <h5 className='mb-[7px]'>- 네이버 마케팅에서 사용되는 용어들인 <span className='text-blue-500'> CPC, 키워드, 입찰가 등</span>을 간단하고 이해하기 쉽게 설명해 드립니다.</h5>
+            <span className='font-[600] text-[18px]'>2. 최적의 키워드를 사용</span>
+            <h5 className='mb-[7px]'>
+              - 고객님의 음식점/회사를 홍보하기 위해서는 그 성격에 맞는 키워드를 적어야합니다.
+              그렇지 않으면 파워링크의 경우 상당한 광고비용을 지불해야 되고 스마트플레이스의 경우에는 순위하락으로 이어집니다.&nbsp;
+              <span className='text-green-600'>키워드 선택과 함께 이미지와 홍보 문구 등</span>을 조합하여 광고 효과를 극대화합니다. <br />
+              또한 경쟁사의 중복/악성클릭에 대한 설명과 해결방안을 제공합니다.
             </h5>
-            <span className='font-[600] text-[18px]'>2. 템플릿과 형식을 활용합니다</span>
-            <h5 className='mb-[5px]'>
-                - 블로그 마케팅을 이용할 때의 문제점은 글을 무분별하게 작성하는 경우입니다. 글은 논리적으로 작성되어야 하며 <span className='text-blue-500'>본문과 연관된 키워드와 사진</span>을 첨부해야 네티즌들이 손쉽게 정보를 받아드립니다. 양식에서 고객님들이 변경하고 싶은 부분은 언제든지 수정이 가능하며, 결과적으로 깔끔하고 눈에 띄는 글을 작성할 수 있습니다.<br />
+            <span className='font-[600] text-[18px]'>3. 세팅 이후 대행사 없이 직접 운영하는 법</span>
+            <h5 className='mb-[7px]'>
+              - 파워링크/스마트플레이스 전부 세팅하기 위해서 설정할 수 있는 기능들이 정말 많습니다.
+              부적절한 설정은 각 기능들이 따로 놀게 되고 광고의 효율성이 타업체에 비해 떨어져서 매출 하락으로 이어지죠.
+              <span className='text-red-500'>예를 들어 '여성의류'키워드 대신 '여성데일리룩코디'와 같은 검색 가능성이 낮은 키워드를 설정하면 손해만 보게 됩니다.</span>&nbsp;
+              바이럴토스는 최소한의 비용으로 최대한의 효과를 얻을 수 있는 고객님에 맞는 세팅을 설정해주고 이전에 알지 못한 유용한 팁을 공유합니다.<br />
+              마지막으로, 대행사를 통하지 않고 직접 운영하고 관리하는 방법에 대한 안내도 제공합니다.
             </h5>
-            <span className='font-[600] text-[18px]'>3. 노하우를 드립니다.</span>
-            <h5>
-                - 이후에는 외부 업체를 이용하지 않고 직접 블로그 마케팅을 수행할 수 있는 방법과 <span className='text-yellow-600'>몇 년 동안 축적된 유용한 팁과 노하우</span>를 제공합니다.
-                바이럴토스가 제공하는 블로그 서비스는 가장 초석이 되는 부분으로, 이제 막 창업하거나 블로그 마케팅을 해보신적이 없는 분들을 위한 서비스입니다. 뿐만 아니라 같이 작업을 진행할 블로거들은 수년간 쌓아온 신뢰가 있는 전문가이니 안심하고 맡기셔도 됩니다.
-            </h5>
+            <span className='font-[600] text-[18px]'></span>
           </div>
         </div>
         <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+          <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
         </div>
       </div>  
     </div>
   )
 }
 
-export default Outbox
+export default Outbox2
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
   "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
 ]
+
+// 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
+
+// 파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
+// 일반적으로 음식점에서는 스마트플레이스를 기업의 경우 파워링크를 이용합니다.
+// 하지만 알면 알수록 이 둘은 성격이 비슷한데요.
 
 // 1. 지속적인 포스팅
 // - 아무리 이웃과 조회수가 많더라도 지속적인 포스팅이 뒷받침되지 않으면 광고효과를 기대하기 어렵습니다.

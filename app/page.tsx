@@ -16,11 +16,11 @@ export default function Home() {
       <Nav />
       <main>
         <Main />
-        <Explanation />
-        <Website />
-        <Worry />
-        <Youtuber />
+        {/* <Explanation /> */}
+        {/* <Website /> */}
+        {/* <Worry /> */}
         <Service />
+        <Youtuber />
         <Waiting />
         <Secret />
       </main>

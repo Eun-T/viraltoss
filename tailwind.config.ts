@@ -7,6 +7,17 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      '2xl': {'max': '1400px'},
+
+      'xl': {'max': '1080px'},
+
+      'lg': {'max': '1023px'},
+
+      'md': {'max': '767px'},
+
+      'sm': {'max': '639px'},  
+      },
     extend: {
       backgroundImage: {
         
@@ -30,13 +41,19 @@ const config: Config = {
         imageDown: {
           '0%': { transform: "translateY(-20px)" },
           '100%': { transform: "translateY(0px)" }
-        }
+        },
+        barUp: {
+          '0%': { opacity: ".3" },
+          '50%': { opacity: "1" },
+          '100%': { opacity: ".3" }
+        },
       },
       animation: {
         textShow: 'textShow .5s ease',
         buttonShow: 'buttonShow 2s ease',
         imageUp: 'imageUp .5s ease',
-        imageDown: 'imageDown .5s ease'
+        imageDown: 'imageDown .5s ease',
+        barUp: 'barUp .5s ease',
       },
     },
   },
