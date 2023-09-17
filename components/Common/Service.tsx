@@ -3,6 +3,8 @@ import Outbox from "./Outbox";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Outbox2 from "./Outbox2";
 import Outbox3 from "./Outbox3";
+import Outbox4 from "./Outbox4";
+import Outbox5 from "./Outbox5";
 
 type Props = {};
 
@@ -11,8 +13,10 @@ const Service = (props: Props) => {
     <section className="w-full bg-[#f4f4f4] pt-[70px] pb-[150px] relative">
       <p className="text-center text-[50px] font-[700] mb-[80px]">All-in-one 서비스</p>
       {/* <Outbox /> */}
-      <Outbox2 />
+      {/* <Outbox2 /> */}
       {/* <Outbox3 /> */}
+      {/* <Outbox4 /> */}
+      <Outbox5 />
       <div className="w-[92%] max-w-[1140px] mx-auto">
         <div className="mb-[80px]">
           <p className="text-center text-[30px] font-[700] mb-[50px]">

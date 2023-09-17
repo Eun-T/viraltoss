@@ -5,7 +5,7 @@ type Props = {}
 // 3. 솔직하고 정직하게
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
 
-const Outbox3 = (props: Props) => {
+const Outbox4 = (props: Props) => {
   return (
     <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
       <div className='w-full h-full bg-black opacity-50 absolute'></div>
@@ -13,42 +13,55 @@ const Outbox3 = (props: Props) => {
         <div className='absolute top-0 right-[30px]'>x</div>
         <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
         <div className='w-[60%] bg--500'>
-          <div className='break-keep leading-[1.6]'>
-            <h4 className='text-[22px] font-[700]'>SNS 페이지</h4>
+          <div className='break-keep'>
+            <h4 className='text-[22px] font-[700]'>유튜브 컨설팅</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[7px]'>
-              스마트폰 출시 이후, SNS 마케팅은 더 이상 선택 사항이 아닌 필수가 되었습니다.
-              왜냐하면 SNS를 통한 마케팅은 브랜드 신뢰도와 인지도를 상승시키는데 효과적인 전략이기 때문입니다.
-              인스타그램,페이스북,트위터 등 많은 플랫폼을 통해 소비자들에게 친밀한 이미지를 제공할 수 있죠.
-              <span className='text-green-700'>그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?</span>
-            </h5>
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 유명 인플루언서와 협업을 통한 마케팅</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 브랜드 채널 개설 및 운영</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 고객님의 SNS 계정 관리</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅</span><br />
-            <h5 className='mb-[7px]'>
-              등이 있습니다.<br />
-              저희는 단순히 외주를 주는 것이 아니라 소통과 협력을 통해 언제든지 수정이 가능합니다.
-              이 서비스는 <span className='text-blue-400'>블로그와 파워링크등 다른 마케팅 채널을 원하시는 분, 저렴한 비용으로 높은 효과를 원하시는 분</span>에게 추천드립니다.
-              다년간의 노하우와 전문적인 지식을 갖추고 있으니, 바이럴토스를 믿고 맡겨주세요.
-            </h5>
+              <h5 className='mb-[7px]'>
+                수백만원 짜리 컨설팅 강의를 듣고 계신가요?
+                유료 VOD 및 전자책을 읽고 계신가요?<br />
+                조회수와 구독자가 증가하지 않아 걱정하시거나 채널 운영에 어려움을 겪고 있다면,
+                이는 잘못된 방향으로 가고 있다는 증거입니다.
+                그러나 상황을 객관적으로 평가하는 것은 간단한 일이 아닙니다.
+                우리는 이러한 분들을 위해 맞춤형 컨설팅으로 새로운 활기를 불어넣습니다.<br />
+                그 방법은 다음과 같습니다.
+              </h5>
+              <span className='font-[600] text-[18px]'>1. 객관적인 자료로 문제 해설</span>
+              <h5 className='mb-[7px]'>
+                - 어려운 용어를 피하고 차트와 데이터를 사용하여 기술적 분석을 실시합니다.
+                <span className='text-red-500'>'왜 구독자 수가 정체되었는지'
+                '조회수가 낮은 이유가 무엇인지' 등</span>을 제3자의 시각으로 바라보고 크리에이터에게 필요한 부분을 설명드립니다.
+                물론 고객님께서 기분이 나쁠 수도 있고 자존심이 상할 수도 있지만, 성공하기 위해서는 누군가의 따끔한 말 한마디가 필요할때가 있습니다.
+                결코 쉬운일은 아니지만 사람들이 맞춤 컨설팅을 찾는 이유랍니다.
+              </h5>
+              <span className='font-[600] text-[18px]'>2. 새로운 수익 구조</span>
+              <h5 className='mb-[7px]'>
+                - 고객님의 채널을 면밀히 분석하여 광고 수익 외에도 <span className='text-blue-400'>새로운 비즈니스 모델</span>을 찾아냅니다.
+                경제적인 안정감을 위해서는 다양한 수익 경로가 필요합니다.
+              </h5>
+              <span className='font-[600] text-[18px]'>3. 채널의 방향성을 잡아드립니다</span>
+              <h5 className='mb-[7px]'>
+                - 컨설팅의 핵심은 고객님에게 자신감을 불어넣어 도전할 수 있도록 하는 것입니다.
+                따라서 유튜브의 <span className='text-green-700'>방향성을 위해서 채널 목적에 맞는 어떤 컨셉을 잡고 나아가야하는지를 함께 의논하고 소통</span>하는 시간을 가지게 됩니다.
+                구독자 니즈를 충족시킬 다양한 아이템을 가지고 있으니 언제든지 믿고 맡겨주시면 감사합니다.
+              </h5>
           </div>
         </div>
         <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+          <img src="images/youtube_consulting.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
         </div>
       </div>  
     </div>
   )
 }
 
-export default Outbox3
+export default Outbox4
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
   "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
 ]
 
+//ctr,컨설팅,알고리즘,수익구조
 // 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
 
 // 파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
