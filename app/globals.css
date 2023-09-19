@@ -23,6 +23,6 @@ body {
 
 @font-face {
   font-family: "Pretendard";
-  font-weight: 200;
+  font-weight: normal;
   src: url("/fonts/Pretendard-Medium.woff") format("truetype");
 }

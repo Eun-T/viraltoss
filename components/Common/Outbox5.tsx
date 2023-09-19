@@ -41,7 +41,7 @@ const Outbox5 = (props: Props) => {
           </div>
         </div>
         <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/youtube_consulting.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+          <img src="images/best.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
         </div>
       </div>  
     </div>

@@ -16,12 +16,12 @@ export default function Home() {
       <Nav />
       <main>
         <Main />
-        {/* <Explanation /> */}
         {/* <Website /> */}
         {/* <Worry /> */}
         <Service />
         <Youtuber />
-        <Waiting />
+        <Explanation />
+        {/* <Waiting /> */}
         <Secret />
       </main>
     </>

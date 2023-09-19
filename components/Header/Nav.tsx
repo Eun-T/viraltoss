@@ -36,7 +36,7 @@ const Nav = () => {
                 href="/"
                 className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#4e5968] hover:animate-[textShow_.5s_ease-in-out] bg-transparent text-[15px] text-center"
               >
-                회사 소개
+                홈
               </a>
             </li>
             <li className="h-full px-[8px] flex items-center list-none">
@@ -44,7 +44,7 @@ const Nav = () => {
                 href="/"
                 className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#4e5968] hover:animate-[textShow_.5s_ease-in-out] bg-transparent text-[15px] text-center"
               >
-                고객센터
+                마케팅 상품
               </a>
             </li>
             <li className="h-full px-[8px] flex items-center list-none">
@@ -52,7 +52,7 @@ const Nav = () => {
                 href="/"
                 className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#4e5968] hover:animate-[textShow_.5s_ease-in-out] bg-transparent text-[15px] text-center"
               >
-                자주 묻는 질문
+                서비스 대상
               </a>
             </li>
             <li className="h-full px-[8px] flex items-center list-none">
@@ -60,7 +60,7 @@ const Nav = () => {
                 href="/"
                 className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#4e5968] hover:animate-[textShow_.5s_ease-in-out] bg-transparent text-[15px] text-center"
               >
-                채용
+                문의하기
               </a>
             </li>
           </ul>

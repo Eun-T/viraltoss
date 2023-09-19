@@ -16,7 +16,7 @@ const Service = (props: Props) => {
       {/* <Outbox2 /> */}
       {/* <Outbox3 /> */}
       {/* <Outbox4 /> */}
-      <Outbox5 />
+      {/* <Outbox5 /> */}
       <div className="w-[92%] max-w-[1140px] mx-auto">
         <div className="mb-[80px]">
           <p className="text-center text-[30px] font-[700] mb-[50px]">

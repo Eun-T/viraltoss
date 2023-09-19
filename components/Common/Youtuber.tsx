@@ -8,7 +8,7 @@ const Youtuber = (props: Props) => {
     <section className="w-full pb-[150px] pt-[100px]">
       <div className="w-[92%] max-w-[1140px] mx-auto">
         <h1 className={"text-[40px] font-[700] text-center mb-[100px]"}>
-          바이럴토스는 다음과 같은 분들을 모십니다
+          다음과 같은 분을 모십니다
         </h1>
 
         <div className="gap-[50px] flex justify-center items-center mb-[100px]">
