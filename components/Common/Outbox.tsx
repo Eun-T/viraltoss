@@ -1,16 +1,29 @@
 import React from 'react'
+import { TfiClose } from "react-icons/tfi";
 
-type Props = {}
+type Outbox = {
+  isOpen: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
 
 // 3. 솔직하고 정직하게
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
 
-const Outbox = (props: Props) => {
-  return (
+const Outbox = ({isOpen,setOpen}: Outbox) => {
+
+
+
+  return isOpen ? (
     <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
-      <div className='w-full h-full bg-black opacity-60 absolute'></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
-        <div className='absolute top-0 right-[30px]'>x</div>
+      <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
+        setOpen(false)
+      }}></div>
+      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
+        <div className='absolute top-[30px] right-[30px] cursor-pointer' onClick={() => {
+          setOpen(false)
+        }}>
+          <TfiClose size="40"/>
+        </div>
         <div className='w-[60%] bg--500'>
           <div className='break-keep'>
             <h4 className='text-[22px] font-[700]'>블로그 마케팅이란?</h4>
@@ -42,7 +55,7 @@ const Outbox = (props: Props) => {
         </div>
       </div>  
     </div>
-  )
+  ) : null
 }
 
 export default Outbox

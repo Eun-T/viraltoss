@@ -1,14 +1,19 @@
 import React from 'react'
 
-type Props = {}
+type Outbox = {
+  isOpen: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
 
 // 3. 솔직하고 정직하게
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
 
-const Outbox4 = (props: Props) => {
-  return (
+const Outbox4 = ({isOpen,setOpen}: Outbox) => {
+  return isOpen ? (
     <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
-      <div className='w-full h-full bg-black opacity-50 absolute'></div>
+      <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
+        setOpen(false)
+      }}></div>
       <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
         <div className='absolute top-0 right-[30px]'>x</div>
         <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
@@ -51,7 +56,7 @@ const Outbox4 = (props: Props) => {
         </div>
       </div>  
     </div>
-  )
+  ) : null
 }
 
 export default Outbox4
