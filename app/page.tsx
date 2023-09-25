@@ -24,6 +24,7 @@ export default function Home() {
         <Youtuber />
         <Explanation />
         <Friend />
+      <Channel />
         {/* <Secret /> */}
       </main>
       <Footer />

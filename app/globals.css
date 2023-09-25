@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family:  sans-serif;
   overflow-x: hidden;
 }
 
@@ -43,8 +43,8 @@ body {
   background-color: rgb(102, 102, 102);
 }
 
-@font-face {
+/* @font-face {
   font-family: "Pretendard";
   font-weight: normal;
   src: url("/fonts/Pretendard-Medium.woff") format("truetype");
-}
+} */
