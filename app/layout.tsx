@@ -5,14 +5,14 @@ import localFont from "next/font/local"
 
 // const inter = Inter({ subsets: ["latin"] });
 
-const pretendard = localFont({
-  src: "./fonts/Pretendard-Medium.woff",
-  weight: '100 900'
+export const pretendardVariable = localFont({
+  src: "./fonts/PretendardVariable.ttf",
+  weight:'100 900'
 })
 
 export const helvetica = localFont({
-  src: "./fonts/Helvetica Light.ttf",
-  weight: '100 900'
+  src: "./fonts/Helvetica-Light.ttf",
+  weight:'100 900'
 })
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={pretendard.className}>
+    <html lang="ko" className={pretendardVariable.className}>
       <body>
         {children}
       </body>

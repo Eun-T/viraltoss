@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { RiArrowDownSFill } from 'react-icons/ri';
+import { helvetica } from "@/app/layout";
 
 type Props = {};
 
@@ -29,7 +30,7 @@ const Main = (props: Props) => {
         {/* <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white"></div> */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div className="mt-[100px] flex flex-col items-center justify-start whitespace-pre-wrap">
-            <h1 className={"text-[60px] font-[700] text-center leading-normal" + helvetica.className}>
+            <h1 className={"text-[60px] font-[700] text-center leading-normal"}>
               마케팅의 모든것
               <br/>
               토스에서 쉽고 간편하게

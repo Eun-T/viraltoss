@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 declare global {
   interface Window {
@@ -10,34 +11,50 @@ declare global {
 
 const addKakaoTalkChannelButton = () => {
 
+  const addKakaoChannel = () => {
+    // if (window.Kakao) {
+    //   //카카오 스크립트가 로드된 경우
+    //   const kakao = window.Kakao;
 
+    //   //인증이 안되어있는 경우 인증한다.
+    //   if (!kakao.isInitialized()) {
+    //     kakao.init("sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN"); // 카카오에서 제공받은 javascript key를 넣어줌 -> .env파일에서 호출시킴
+    //   }
+    // }
 
-    window.kakaoAsyncInit = function () {
-      Kakao.Channel.createAddChannelButton({
-        container: "#kakao-talk-channel-add-button",
-      });
-    };
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.channel.min.js';
-      js.integrity = 'sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN';
-      js.crossOrigin = 'anonymous';
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'kakao-js-sdk');
+    window.Kakao.Channel.addChannel({
+      channelPublicId: '_xlqtdG', //카카오 채널 ID
+    });
+  }; 
 
-
-
+  window.kakaoAsyncInit = function () {
+  };
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.channel.min.js";
+    js.integrity =
+      "sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN";
+    js.crossOrigin = "anonymous";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "kakao-js-sdk");
 
   return (
-    <div
-      id="kakao-talk-channel-add-button"
-      data-channel-public-id="_xlqtdG"
-      data-size="large"
-      data-support-multiple-densities="true"
-      className="relative z-[200] top-[100px]"
-    ></div>
+    <>
+      <div id="kakao-talk-channel-add-button" onClick={addKakaoChannel} className="fixed bottom-[40px] right-[40px] z-[200] cursor-pointer">
+        <Image
+          src={"/images/kakao.png"}
+          alt="youtube"
+          objectFit="contain"
+          width={90}
+          height={90}
+          className="rounded-[50px]"
+        />
+      </div>
+    </>
   );
 };
 

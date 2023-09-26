@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import Outbox from "./Outbox";
 import Outbox2 from "./Outbox2";
 import Outbox3 from "./Outbox3";
 import Outbox4 from "./Outbox4";
 import Outbox5 from "./Outbox5";
 import Plus from "./Plus";
+import { helvetica } from "@/app/layout";
 
 const cardVariants = {
   offscreen: {
@@ -35,10 +35,13 @@ const Service = () => {
   const [plus, setPlus] = useState<boolean>(false);
 
   return (
-    <section className="w-full bg-[#f4f4f4] pt-[70px] pb-[150px] relative" id="product">
-      <p className="text-center text-[50px] font-[700] mb-[80px]">
+    <section
+      className="w-full bg-[#f4f4f4] pt-[70px] pb-[150px] relative"
+      id="product"
+    >
+      <h2 className={"text-center text-[50px] font-[700] mb-[80px] "}>
         All-in-one 서비스
-      </p>
+      </h2>
 
       <Outbox isOpen={outbox1} setOpen={setOutbox1} />
       <Outbox2 isOpen={outbox2} setOpen={setOutbox2} />
@@ -53,9 +56,9 @@ const Service = () => {
             variants={cardVariants}
             viewport={{ once: true }}
           >
-            <p className="text-center text-[30px] font-[700] mb-[50px]">
+            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
               자영업자를 위한 패키지
-            </p>
+            </h3>
             <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
               {/* 0 0 0 0.05rem hsla(214,88%,27%,0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06) */}
 
@@ -79,7 +82,7 @@ const Service = () => {
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
-                    <h1 className="font-[700] mb-[5px] text-[20px]">블로그</h1>
+                    <h4 className="font-[700] mb-[5px] text-[20px]">블로그</h4>
                     <p>
                       바이럴 영역의 활발한 경쟁 속에서 블로그 마케팅은 경쟁이
                       점점 치열해지고 있습니다. 따라서 광고효과를 기대하기
@@ -112,9 +115,9 @@ const Service = () => {
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
-                    <h1 className="font-[700] mb-[5px] text-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[20px]">
                       파워링크/네이버 플레이스
-                    </h1>
+                    </h4>
                     <p>
                       네이퍼 파워링크의 기본적인 설명과 세팅 방법을
                       설정해드립니다. 무조건 비싼 키워드가 아닌 메인/세부키워드
@@ -147,9 +150,9 @@ const Service = () => {
                     {/* Designed by BiZkettE1 / Freepik */}
                   </div>
                   <div className="px-[20px] my-[20px]">
-                    <h1 className="font-[700] mb-[5px] text-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[20px]">
                       SNS 페이지
-                    </h1>
+                    </h4>
                     <p>
                       SNS 페이지 광고의 핵심은 노출 수만을 추구하는 것이 아니라,
                       실제 구매/방문 가능성을 극대화할 수 있는 최상의 페이지에서
@@ -171,9 +174,9 @@ const Service = () => {
           viewport={{ once: true }}
         >
           <div className="mb-[80px]">
-            <p className="text-center text-[30px] font-[700] mb-[50px]">
+            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
               유튜버를 위한 통합 서비스
-            </p>
+            </h3>
 
             <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
               <motion.div
@@ -196,9 +199,9 @@ const Service = () => {
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
-                    <h1 className="font-[700] mb-[5px] text-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[20px]">
                       유튜브 컨설팅
-                    </h1>
+                    </h4>
                     <p>
                       스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
                       있습니다. 바이럴토스는 모든 클라이언트에게 우리만의
@@ -228,7 +231,7 @@ const Service = () => {
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
-                    <h1 className="font-[700] mb-[5px] text-[20px]">인기글</h1>
+                    <h4 className="font-[700] mb-[5px] text-[20px]">인기글</h4>
                     <p>
                       유튜브 영상을 캡쳐해서 하나의 스토리를 만들어 드립니다.
                       이를 국내 다양한 온라인 커뮤니티에 게시하여 화제성을
@@ -248,16 +251,16 @@ const Service = () => {
             variants={cardVariants}
             viewport={{ once: true }}
           >
-            <p className="text-center text-[30px] font-[700] mb-[50px]">
+            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
               기업을 위한 통합 서비스
-            </p>
+            </h3>
             <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
                   <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                  <h2 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
+                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by stories / Freepik
-                  </h2>
+                  </h5>
                   <img
                     src="images/blog2.png"
                     alt=""
@@ -265,7 +268,7 @@ const Service = () => {
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">
-                  <h1 className="font-[700] mb-[5px] text-[20px]">블로그</h1>
+                  <h4 className="font-[700] mb-[5px] text-[20px]">블로그</h4>
                   <p>
                     스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
                     있습니다. 바이럴토스는 모든 클라이언트에게 우리만의 '블로그
@@ -277,9 +280,9 @@ const Service = () => {
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
                   <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                  <h2 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
+                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by Freepik
-                  </h2>
+                  </h5>
                   <img
                     src="images/youtube12.jpg"
                     alt=""
@@ -287,7 +290,7 @@ const Service = () => {
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">
-                  <h1 className="font-[700] mb-[5px] text-[20px]">유튜브</h1>
+                  <h4 className="font-[700] mb-[5px] text-[20px]">유튜브</h4>
                   <p>
                     유튜브 영상을 캡쳐해서 하나의 스토리를 만들어 드립니다. 이를
                     국내 다양한 온라인 커뮤니티에 게시하여 화제성을 확보하고
@@ -298,9 +301,9 @@ const Service = () => {
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
                   <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                  <h2 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
+                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by studiogstock / Freepik
-                  </h2>
+                  </h5>
                   <img
                     src="images/community2.png"
                     alt=""
@@ -308,14 +311,11 @@ const Service = () => {
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">
-                  <h1 className="font-[700] mb-[5px] text-[20px]">커뮤니티</h1>
+                  <h4 className="font-[700] mb-[5px] text-[20px]">커뮤니티</h4>
                   <p>
                     스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
-                    있습니다.
-                  </p>
-                  <p>
-                    바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해
-                    드립니다.
+                    있습니다. 바이럴토스는 모든 클라이언트에게 우리만의 '전략'을
+                    제공해 드립니다.
                   </p>
                 </div>
               </div>

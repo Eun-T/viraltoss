@@ -4,6 +4,7 @@ import Friend from "@/components/Common/Friend";
 import Main from "@/components/Common/Main";
 import Secret from "@/components/Common/Secret";
 import Service from "@/components/Common/Service";
+import Talk from "@/components/Common/Talk";
 import UpArrow from "@/components/Common/UpArrow";
 import Waiting from "@/components/Common/Waiting";
 import Website from "@/components/Common/Website";
@@ -16,7 +17,7 @@ import Nav from "@/components/Header/Nav";
 export default function Home() {
   return (
     <div>
-      <UpArrow />
+      {/* <UpArrow /> */}
       <Nav />
       <main>
         <Main />
@@ -24,8 +25,7 @@ export default function Home() {
         <Youtuber />
         <Explanation />
         <Friend />
-      <Channel />
-        {/* <Secret /> */}
+        <Channel />
       </main>
       <Footer />
     </div>

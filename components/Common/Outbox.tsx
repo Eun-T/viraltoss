@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { TfiClose } from "react-icons/tfi";
 
 type Outbox = {
@@ -11,10 +11,25 @@ type Outbox = {
 
 const Outbox = ({isOpen,setOpen}: Outbox) => {
 
+  const [isScrollLocked, setScrollLocked] = useState(false);
 
+  // 모달 열릴 때
+  useEffect(() => {
+    if (isOpen) {
+      // 스크롤을 막음
+      document.documentElement.style.overflowY = 'hidden';
+
+      setScrollLocked(true);
+    } else {
+      // 스크롤을 다시 활성화
+      document.documentElement.style.overflowY = 'auto';
+
+      setScrollLocked(false);
+    }
+  }, [isOpen]);
 
   return isOpen ? (
-    <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
+    <div className={'fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center '}>
       <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
