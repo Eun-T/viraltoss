@@ -1,6 +1,7 @@
 import React from "react";
 import KakaoTalkChannelButton from "./Channel";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
@@ -10,30 +11,30 @@ const Friend = (props: Props) => {
       <div className="w-full" id="question">
         <div className="w-[92%] max-w-[1140px] mx-auto py-[150px]">
           <div className="flex justify-center items-center gap-[20px]">
-            <a
+            <Link
               href="http://pf.kakao.com/_xlqtdG/chat"
               className="flex items-center px-[65px] py-[20px] rounded-[50px] bg-[#fadd41] text-[#000300]"
             >
               <Image
                 src={"/images/talk_consulting.png"}
-                alt="youtube"
+                alt="톡상담."
                 width={30}
                 height={30}
               />
               상담하기
-            </a>
-            <a
+            </Link>
+            <Link
               href="tel:010-3981-4325"
               className="flex gap-[5px] items-center px-[65px] py-[20px] rounded-[50px] bg-[#2a2626] text-[#fff] border-[2px]"
             >
               <Image
                 src={"/images/phone1.png"}
-                alt="youtube"
+                alt="전화하기."
                 width={24}
                 height={24}
               />
               통화하기
-            </a>
+            </Link>
           </div>
         </div>
       </div>

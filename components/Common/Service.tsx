@@ -9,6 +9,7 @@ import Outbox4 from "./Outbox4";
 import Outbox5 from "./Outbox5";
 import Plus from "./Plus";
 import { helvetica } from "@/app/layout";
+import Image from "next/image";
 
 const cardVariants = {
   offscreen: {
@@ -75,10 +76,12 @@ const Service = () => {
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
-                    <img
-                      src="images/blog1.jpg"
-                      alt=""
-                      className="w-full h-full object-contain object-center hover:scale-110 duration-500"
+                    <Image
+                      src={"/images/blog1.jpg"}
+                      alt="블로그."
+                      fill
+                      objectFit="contain"
+                      objectPosition="center"
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
@@ -107,11 +110,13 @@ const Service = () => {
                 >
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
-                    <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                    <img
-                      src="images/naver_power_link.png"
-                      alt=""
-                      className="w-full h-full object-cover object-center"
+                    <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                    <Image
+                      src={"/images/naver_power_link.png"}
+                      alt="네이버 파워 링크,스마트플레이스."
+                      fill
+                      objectFit="cover"
+                      objectPosition="center"
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
@@ -141,11 +146,13 @@ const Service = () => {
                 >
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
-                    <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                    <img
-                      src="images/social_media.png"
-                      alt=""
-                      className="w-full h-full object-contain object-center"
+                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                    <Image
+                      src={"/images/social_media.png"}
+                      alt="SNS."
+                      fill
+                      objectFit="contain"
+                      objectPosition="center"
                     />
                     {/* Designed by BiZkettE1 / Freepik */}
                   </div>
@@ -192,10 +199,12 @@ const Service = () => {
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
-                    <img
-                      src="images/youtuber123.png"
-                      alt=""
-                      className="w-full h-full object-cover object-top hover:scale-110 duration-500"
+                    <Image
+                      src={"/images/youtuber123.png"}
+                      alt="유튜브."
+                      fill
+                      objectFit="contain"
+                      objectPosition="center"
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
@@ -223,11 +232,13 @@ const Service = () => {
                 >
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
-                    <div className="w-full h-full opacity-25 absolute bg-black"></div>
-                    <img
-                      src="images/popularity.png"
-                      alt=""
-                      className="w-full h-full object-cover object-center"
+                    <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                    <Image
+                      src={"/images/popularity.png"}
+                      alt="인기글."
+                      fill
+                      objectFit="contain"
+                      objectPosition="center"
                     />
                   </div>
                   <div className="px-[20px] my-[20px]">
@@ -257,14 +268,16 @@ const Service = () => {
             <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black"></div>
+                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by stories / Freepik
                   </h5>
-                  <img
-                    src="images/blog2.png"
-                    alt=""
-                    className="w-full h-full object-cover object-center"
+                  <Image
+                    src={"/images/blog2.png"}
+                    alt="블로그."
+                    fill
+                    objectFit="contain"
+                    objectPosition="center"
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">
@@ -279,14 +292,16 @@ const Service = () => {
               </div>
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black"></div>
+                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by Freepik
                   </h5>
-                  <img
-                    src="images/youtube12.jpg"
-                    alt=""
-                    className="w-full h-full object-contain object-top"
+                  <Image
+                    src={"/images/youtube12.jpg"}
+                    alt="유튜브."
+                    fill
+                    objectFit="contain"
+                    objectPosition="center"
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">
@@ -300,14 +315,16 @@ const Service = () => {
               </div>
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black"></div>
+                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by studiogstock / Freepik
                   </h5>
-                  <img
-                    src="images/community2.png"
-                    alt=""
-                    className="w-full h-full object-contain object-center"
+                  <Image
+                    src={"/images/community2.png"}
+                    alt="커뮤니티사이트."
+                    fill
+                    objectFit="contain"
+                    objectPosition="center"
                   />
                 </div>
                 <div className="px-[20px] my-[20px]">

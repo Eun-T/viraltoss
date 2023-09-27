@@ -18,13 +18,9 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
     if (isOpen) {
       // 스크롤을 막음
       document.documentElement.style.overflowY = 'hidden';
-
-      setScrollLocked(true);
     } else {
       // 스크롤을 다시 활성화
       document.documentElement.style.overflowY = 'auto';
-
-      setScrollLocked(false);
     }
   }, [isOpen]);
 

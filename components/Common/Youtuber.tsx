@@ -97,7 +97,7 @@ const Youtuber = (props: Props) => {
                 alt="sad"
                 className="w-full min-w-[400px]"
               /> */}
-              <Image src={"/images/cafe.jpg"} alt="youtube" fill objectFit="cover" objectPosition="top"/>
+              <Image src={"/images/cafe.jpg"} alt="소규모 자영업자." fill objectFit="cover" objectPosition="top"/>
             </div>
           </div>
         </motion.div>
@@ -129,7 +129,7 @@ const Youtuber = (props: Props) => {
                 alt="sad"
                 className="w-full min-w-[400px]"
               /> */}
-              <Image src={"/images/youtuber.jpg"} alt="youtube" fill objectFit="cover" objectPosition="top"/>
+              <Image src={"/images/youtuber.jpg"} alt="유튜버." fill objectFit="cover" objectPosition="top"/>
             </div>
           </div>
           {/* Designed by Freepik */}
@@ -161,7 +161,7 @@ const Youtuber = (props: Props) => {
                 alt="sad"
                 className="w-full min-w-[400px]"
               /> */}
-              <Image src={"/images/enterprise.jpg"} alt="youtube" fill objectFit="cover" objectPosition="center"/>
+              <Image src={"/images/enterprise.jpg"} alt="중소/중견기업." fill objectFit="cover" objectPosition="center"/>
             </div>
           </div>
           {/* Designed by brgfx / Freepik */}

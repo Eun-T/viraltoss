@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 type Outbox = {
   isOpen: boolean,
@@ -9,6 +9,17 @@ type Outbox = {
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
 
 const Outbox3 = ({isOpen,setOpen}: Outbox) => {
+
+  useEffect(() => {
+    if (isOpen) {
+      // 스크롤을 막음
+      document.documentElement.style.overflowY = 'hidden';
+    } else {
+      // 스크롤을 다시 활성화
+      document.documentElement.style.overflowY = 'auto';
+    }
+  }, [isOpen]);
+  
   return isOpen ? (
     <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
       <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
