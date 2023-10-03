@@ -22,6 +22,9 @@ const config: Config = {
       backgroundImage: {
         
       },
+      boxShadow: {
+        'navbarr': '0px 2px 8px 0px rgba(0, 0, 0, 0.1), 0px 4px 6px 0px rgba(54, 79, 199, 0.08)'
+      },
       keyframes: {
         textShow: {
           '0%': { backgroundColor: "transparent" },

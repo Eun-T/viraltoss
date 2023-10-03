@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { TfiClose } from "react-icons/tfi";
+import Image from "next/image";
 
 type Outbox = {
   isOpen: boolean,
@@ -29,8 +30,9 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
       <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
-        <div className='absolute top-[30px] right-[30px] cursor-pointer' onClick={() => {
+      {/* border-[15px] border-black box-border */}
+      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
+        <div className='absolute top-[30px] z-[300] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
           <TfiClose size="40"/>
@@ -61,8 +63,15 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
             </h5>
           </div>
         </div>
-        <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+        <div className='w-[40%] relative flex items-center'>
+          {/* <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
+          <Image
+            src={"/images/blog_top.png"}
+            alt="인기글."
+            fill
+            objectFit="contain"
+            objectPosition="center"
+          />
         </div>
       </div>  
     </div>

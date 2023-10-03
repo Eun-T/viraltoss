@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { TfiClose } from "react-icons/tfi";
+import Image from "next/image";
 
 type Outbox = {
   isOpen: boolean,
@@ -26,8 +27,8 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
       <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
-        <div className='absolute top-[30px] right-[30px] cursor-pointer' onClick={() => {
+      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
+        <div className='absolute z-[300] top-[30px] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
           <TfiClose size="40"/>
@@ -62,8 +63,15 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
             <span className='font-[600] text-[18px]'></span>
           </div>
         </div>
-        <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+        <div className='w-[40%] relative flex items-center'>
+          {/* <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
+          <Image
+            src={"/images/power_place.png"}
+            alt="인기글."
+            fill
+            objectFit="contain"
+            objectPosition="center"
+          />
         </div>
       </div>  
     </div>

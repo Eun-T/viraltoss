@@ -1,5 +1,6 @@
 "use client";
 
+import { helvetica } from "@/app/layout";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -23,24 +24,36 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
-    // bg-white
     <nav
-      className={
-        "w-full h-[60px] fixed top-0 bg-white z-20 " +
-        (scrolled ? "border-b-[rgba(0,27,55,0.1)] border-b-[1px]" : "")
-      }
+      className={"w-full fixed top-0 left-0 bg-white z-[50] shadow-navbarr"}
     >
-      <div className="w-[92%] max-w-[1140px] mx-auto flex items-center justify-between h-full">
-        <div>ViralToss</div>
+      {/*  +
+        (scrolled ? "border-b-[rgba(0,27,55,0.1)] border-b-[1px]" : "") */}
+      <div className="w-[92%] max-w-[1140px] h-[72px] mx-auto flex items-center justify-between">
+        <div
+          className={
+            "text-[22px] font-[700] flex items-center  bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-500 " +
+            helvetica.className
+          }
+        >
+          {/* 
+          linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))
+          bg-gradient-to-r from-slate-900 to-slate-700
+          bg-gradient-to-r from-gray-700 via-gray-900 to-black
+          bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
+          bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
+          */}
+          <img src="/images/logo4.svg" alt="" className="w-[100px]" />
+          {/* ViralToss */}
+        </div>
         <div className="h-full ">
           <ul className="flex gap-[10px] h-full">
             <li className="h-full px-[8px] flex items-center list-none">
               <Link
                 href="#home"
                 passHref
-                className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent text-[15px] text-center"
+                className="text-[#3b3f4b] font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent  text-center"
               >
                 홈
               </Link>
@@ -48,7 +61,7 @@ const Nav = () => {
             <li className="h-full px-[8px] flex items-center list-none">
               <Link
                 href="#product"
-                className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent text-[15px] text-center"
+                className="text-[#3b3f4b] font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0] bg-transparent  text-center"
               >
                 마케팅 상품
               </Link>
@@ -56,7 +69,7 @@ const Nav = () => {
             <li className="h-full px-[8px] flex items-center list-none">
               <Link
                 href="#service"
-                className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent text-[15px] text-center"
+                className="text-[#3b3f4b] font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent  text-center"
               >
                 서비스 대상
               </Link>
@@ -64,7 +77,7 @@ const Nav = () => {
             <li className="h-full px-[8px] flex items-center list-none">
               <Link
                 href="#question"
-                className="text-[#4e5968] font-[400] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent text-[15px] text-center"
+                className="text-[#3b3f4b] font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:rounded-[8px] hover:bg-[#f0f0f0]  bg-transparent  text-center"
               >
                 문의하기
               </Link>

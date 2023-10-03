@@ -87,10 +87,12 @@ const Service = () => {
                   <div className="px-[20px] my-[20px]">
                     <h4 className="font-[700] mb-[5px] text-[20px]">블로그</h4>
                     <p>
-                      바이럴 영역의 활발한 경쟁 속에서 블로그 마케팅은 경쟁이
-                      점점 치열해지고 있습니다. 따라서 광고효과를 기대하기
-                      어려워지고 있지만 타겟에 맞는 인플루언서를 매칭하여 양질의
-                      블로그 컨텐츠를 제작해 드립니다.
+                      바이럴 영역에서 경쟁이 치열해지고 있는 블로그 마케팅은
+                      광고효과를 기대하기 어려워지고 있습니다. 그러나 우리는
+                      타겟에 맞는 인플루언서를 선별하고, 고품질의 블로그
+                      콘텐츠를 제작함으로써 고객님의 브랜드 메시지를 효과적으로
+                      전달합니다. 이 과정을 통해 방문객들의 주목을 끄는 데
+                      도움을 드립니다.
                     </p>
                     {/* <p>바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.</p> */}
                   </div>
@@ -121,14 +123,15 @@ const Service = () => {
                   </div>
                   <div className="px-[20px] my-[20px]">
                     <h4 className="font-[700] mb-[5px] text-[20px]">
-                      파워링크/네이버 플레이스
+                      파워링크/스마트플레이스 등등
                     </h4>
                     <p>
-                      네이퍼 파워링크의 기본적인 설명과 세팅 방법을
-                      설정해드립니다. 무조건 비싼 키워드가 아닌 메인/세부키워드
-                      등 최적의 세팅값을 맞춰드립니다. 또한 어떻게 하면 스마트
-                      플레이스 순위를 높일 수 있는지 팁과 노하우를 설명하는
-                      시간을 가집니다.
+                      파워링크/스마트플레이스의 기본적인 설명과 세팅을
+                      제공합니다. 무작정 비싼 키워드가 아닌 브랜드와 연관된
+                      최상의 설정값 맞춰드립니다. 스마트플레이스의 경우 등록부터
+                      광고까지 모든 작업을 전담하여 진행합니다.이외에도 네이버
+                      쇼핑검색, 파워컨텐츠, 브랜드검색 등 다양한 업무를
+                      처리합니다.
                     </p>
                   </div>
                 </div>
@@ -146,7 +149,7 @@ const Service = () => {
                 >
                   <Plus />
                   <div className="w-full h-[220px] relative overflow-hidden">
-                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                    <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/social_media.png"}
                       alt="SNS."
@@ -158,14 +161,15 @@ const Service = () => {
                   </div>
                   <div className="px-[20px] my-[20px]">
                     <h4 className="font-[700] mb-[5px] text-[20px]">
-                      SNS 페이지
+                      SNS 마케팅
                     </h4>
                     <p>
                       SNS 페이지 광고의 핵심은 노출 수만을 추구하는 것이 아니라,
-                      실제 구매/방문 가능성을 극대화할 수 있는 최상의 페이지에서
-                      광고를 전개하는 것입니다. 협력 관계를 맺고 있는 수백여개의
+                      실제 구매/방문 가능성을 극대화하는 최상의 페이지에서
+                      광고를 전개하는 것입니다. 협력 관계를 맺고 있는
                       파워페이지를 통해 잠재 고객만을 위한 맞춤 타겟팅이
-                      가능합니다.
+                      가능합니다. SNS 자체광고를 위한 촬영 및 편집 등의 업무도
+                      담당하고 있습니다.
                     </p>
                   </div>
                 </div>
@@ -180,7 +184,7 @@ const Service = () => {
           variants={cardVariants}
           viewport={{ once: true }}
         >
-          <div className="mb-[80px]">
+          <div className="">
             <h3 className="text-center text-[30px] font-[700] mb-[50px]">
               유튜버를 위한 통합 서비스
             </h3>
@@ -213,10 +217,11 @@ const Service = () => {
                     </h4>
                     <p>
                       스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
-                      있습니다. 바이럴토스는 모든 클라이언트에게 우리만의
-                      '전략'을 제공해 드립니다.
+                      있습니다. 그러기 위해서는 최신 유튜브 알고리즘을 이해할
+                      필요는 없습니다. SEO, CTR, APV와 같은 용어보다는 성공적인
+                      채널 운영을 위한 트렌드와 비법을 공유합니다. 바이럴토스는
+                      모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.
                     </p>
-                    {/* <p>바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.</p> */}
                   </div>
                 </div>
               </motion.div>
@@ -244,9 +249,17 @@ const Service = () => {
                   <div className="px-[20px] my-[20px]">
                     <h4 className="font-[700] mb-[5px] text-[20px]">인기글</h4>
                     <p>
-                      유튜브 영상을 캡쳐해서 하나의 스토리를 만들어 드립니다.
-                      이를 국내 다양한 온라인 커뮤니티에 게시하여 화제성을
-                      확보하고 인기글 게시판에 노출시킵니다.
+                      새로운 구독자를 확보하고 싶으신가요? 저희는 유튜브 영상을
+                      캡처해서 흥미로운 짤을 만듭니다. 이 짤을 국내 다양한
+                      온라인 커뮤니티에 게시하여 인기글 게시판에 노출시킴으로써
+                      화제성을 확보합니다. 이 방법을 통해 시청자들의 관심을
+                      유도하고 귀하의 채널을 성공적으로 성장시킬 수 있을
+                      것입니다.
+                      {/* 이를 통해 시청자들은 더 많은 관심과 참여를 기대할 수
+                      있습니다. 인기글 서비스는 시청자들의 관심을 끌어 참여를 기대할 수 있습니다.
+                      유튜브에서 더 많은 인기와
+                      시청자를 유도하며, 귀하의 채널을 성공적으로 성장시키는 데
+                      도움이 될 것입니다. */}
                     </p>
                   </div>
                 </div>
@@ -255,7 +268,7 @@ const Service = () => {
           </div>
         </motion.div>
 
-        <div>
+        {/* <div>
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
@@ -268,7 +281,7 @@ const Service = () => {
             <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by stories / Freepik
                   </h5>
@@ -287,12 +300,11 @@ const Service = () => {
                     있습니다. 바이럴토스는 모든 클라이언트에게 우리만의 '블로그
                     전략'을 제공해 드립니다.
                   </p>
-                  {/* <p>바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.</p> */}
                 </div>
               </div>
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by Freepik
                   </h5>
@@ -315,7 +327,7 @@ const Service = () => {
               </div>
               <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
                 <div className="w-full h-[220px] relative">
-                <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
+                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                   <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
                     Designed by studiogstock / Freepik
                   </h5>
@@ -338,7 +350,7 @@ const Service = () => {
               </div>
             </div>
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

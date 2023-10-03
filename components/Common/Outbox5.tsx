@@ -1,75 +1,108 @@
-import React, { useEffect } from 'react'
+import Image from "next/image";
+import React, { useEffect } from "react";
+import { TfiClose } from "react-icons/tfi";
 
 type Outbox = {
-  isOpen: boolean,
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
+  isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
 // 3. 솔직하고 정직하게
-// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
+// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
 
-const Outbox5 = ({isOpen,setOpen}: Outbox) => {
-
+const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
-      document.documentElement.style.overflowY = 'hidden';
+      document.documentElement.style.overflowY = "hidden";
     } else {
       // 스크롤을 다시 활성화
-      document.documentElement.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
     }
   }, [isOpen]);
-    
+
   return isOpen ? (
-    <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
-      <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
-        setOpen(false)
-      }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
-        <div className='absolute top-0 right-[30px]'>x</div>
-        <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
-        <div className='w-[60%] bg--500'>
-          <div className='break-keep'>
-            <h4 className='text-[22px] font-[700]'>인기글</h4>
-            <div className='w-full h-[1px] bg-black my-[7px]'></div>
-              <h5 className='mb-[7px]'>
-              요즘 떠오르는 핫한 아이템은 인기글 서비스입니다.
-              본인의 유튜브 채널을 홍보하고 싶으신가요?
-              자사의 제품을 좀더 많은 네티즌에게 광고하고 싶나요?
-              2020년 코로나로 인해 커뮤니티 이용자 수가 폭발적으로 증가했는데요.
-              MZ세대의 경우에는 무려 70%이상이 커뮤니티를 이용합니다.
-              이럴때 일수록 공격적으로 마케팅 전략을 가져야 홍보 효과가 배 이상 발생합니다.
-              그래서 바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>1. 고객님의 영상으로 네티즌들의 이목을 끌 수 있는 짤(3개)들을 만듭니다.</span>
-              <h5 className='mb-[7px]'>
-              - 영상을 한땀한땀 캡쳐하고 이어붙여 짤을 제작합니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>2. 이중에서 원하는 짤을 고객님이 직접 선택합니다.</span>
-              <h5 className='mb-[7px]'>
+    <div className="fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-">
+      <div
+        className="w-full h-full bg-black opacity-50 absolute"
+        onClick={(e) => {
+          setOpen(false);
+        }}
+      ></div>
+      <div className="bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col">
+        <div
+          className="absolute z-[300] top-[30px] right-[30px] cursor-pointer"
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <TfiClose size="40" />
+        </div>
+        <div className="absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]"></div>
+        <div className="w-[60%] bg--500">
+          <div className="break-keep">
+            <h4 className="text-[22px] font-[700]">인기글</h4>
+            <div className="w-full h-[1px] bg-black my-[7px]"></div>
+            <h5 className="mb-[7px]">
+              요즘 떠오르는 핫한 아이템은 인기글 서비스입니다. 본인의 유튜브
+              채널을 홍보하고 싶으신가요? 자사의 제품을 좀더 많은 네티즌에게
+              광고하고 싶나요? 2020년 코로나로 인해 커뮤니티 이용자 수가
+              폭발적으로 증가했는데요. MZ세대의 경우에는 무려 70%이상이
+              커뮤니티를 이용합니다. 이럴때 일수록 공격적으로 마케팅 전략을
+              가져야 홍보 효과가 배 이상 발생합니다. 그래서 바이럴토스는 다음과
+              같은 방법으로 작업을 진행합니다.
+            </h5>
+            <span className="font-[600] text-[18px]">
+              1. 고객님의 영상으로 네티즌들의 이목을 끌 수 있는 짤들을
+              만듭니다.
+            </span>
+            <h5 className="mb-[7px]">
+              - 일단 협의를 통해 커뮤니티에 올릴 유튜브 영상을 선택합니다. 그 이후에 영상을 한땀한땀 캡쳐하고 이어붙여 짤을 제작합니다.
+            </h5>
+            <span className="font-[600] text-[18px]">
+              2. 이중에서 원하는 짤을 고객님이 직접 선택합니다.
+            </span>
+            <h5 className="mb-[7px]">
               - 충분한 논의 끝에 하나를 선정하시면 됩니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>3. 그것을 토스만의 노하우를 사용하여 인기글 게시판에 노출시킵니다.</span>
-              <h5 className='mb-[7px]'>
-              충분한 노하우로 인해 네티즌들의 부정적 여론이 형성되거나 신고 누적으로 삭제될 가능성은 제로에 가깝습니다.
-              뿐만 아니라 오로지 정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는 없습니다.
-              </h5>
+            </h5>
+            <span className="font-[600] text-[18px]">
+              3. 그것을 토스만의 노하우를 사용하여 인기글 게시판에 노출시킵니다.
+            </span>
+            <h5 className="mb-[7px]">
+              숙련된 노하우로 인해 네티즌들의 부정적 여론이 형성되거나 신고
+              누적으로 삭제될 가능성은 제로에 가깝습니다. 뿐만 아니라 오로지
+              정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는
+              없습니다. 인기글 서비스를 이용하시면 커뮤니티에서 고객님의 영상을 감상하고
+              구독자로 유입될 가능성이 상당히 높아집니다. 단 한번이라도 인기글에 게시가 되면
+              다른 광고와 비교해도 수십배 높은 효과를 얻을 수 있습니다.
+            </h5>
           </div>
         </div>
-        <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/best.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+        <div className="w-[40%] relative flex items-center">
+          {/* <img
+            src="images/community3.png"
+            alt="blog_top"
+            className="w-full h-full object-contain object-center"
+          /> */}
+          <Image
+            src={"/images/community3.png"}
+            alt="인기글."
+            fill
+            objectFit="contain"
+            objectPosition="center"
+          />
         </div>
-      </div>  
+      </div>
     </div>
-  ) : null
-}
+  ) : null;
+};
 
-export default Outbox5
+export default Outbox5;
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
-]
+  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
+];
 
 //ctr,컨설팅,알고리즘,수익구조
 // 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
@@ -84,15 +117,18 @@ const data = [
 // - 네이버는 포스팅된 블로그 안에 적혀 있는 단어들을 직접 연결해서 높은 점수를 주게 됩니다. 예를 들어 카페
 // 에 관련된 글을 올렸다면 아메리카노,라떼와 같은 단어들이 본문에 있어야만 점수를 얻고 상위 노출이 됩니다.
 
-{/* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
+{
+  /* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
 - 해시태그를 이용한 홍보
 - 간단하고 직관적인 이미지 노출
-- 프로필 링크를 통해 단순하게 상품을 구입*/}
+- 프로필 링크를 통해 단순하게 상품을 구입*/
+}
 
 // 블로그를 활용해 제품이나 서비스를 홍보하는 마케팅 기법입니다.
 // 장점으로는 소비자들간의 양방향 커뮤니케이션, 낮은비용 대비 고효과 등이 있습니다.
 
-{/* <h3>네이버 파워링크/스마트플레이스란?</h3>
+{
+  /* <h3>네이버 파워링크/스마트플레이스란?</h3>
           <p>
             파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
             일반적으로 음식점에서는 스마트플레이스를 기업의 경우 파워링크를 이용합니다.
@@ -153,4 +189,5 @@ const data = [
             오로지 정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는 없습니다.
 
             가장 염려하시는 부분은 "만약 바이럴"
-          </p> */}
+          </p> */
+}

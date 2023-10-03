@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { TfiClose } from "react-icons/tfi";
+import Image from "next/image";
 
 type Outbox = {
   isOpen: boolean,
@@ -25,12 +27,16 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
       <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col border-[15px] border-black box-border'>
-        <div className='absolute top-0 right-[30px]'>x</div>
+      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
+      <div className='absolute z-[300] top-[30px] right-[30px] cursor-pointer' onClick={() => {
+          setOpen(false)
+        }}>
+          <TfiClose size="40"/>
+        </div>
         <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
         <div className='w-[60%] bg--500'>
           <div className='break-keep leading-[1.6]'>
-            <h4 className='text-[22px] font-[700]'>SNS 페이지</h4>
+            <h4 className='text-[22px] font-[700]'>SNS 마케팅</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
             <h5 className='mb-[7px]'>
               스마트폰 출시 이후, SNS 마케팅은 더 이상 선택 사항이 아닌 필수가 되었습니다.
@@ -42,6 +48,7 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 브랜드 채널 개설 및 운영</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 고객님의 SNS 계정 관리</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅</span><br />
+            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 인스타그램, 페이스북 등 SNS 자체 광고를 위한 사진 촬영 및 편집</span><br />
             <h5 className='mb-[7px]'>
               등이 있습니다.<br />
               저희는 단순히 외주를 주는 것이 아니라 소통과 협력을 통해 언제든지 수정이 가능합니다.
@@ -50,8 +57,15 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
             </h5>
           </div>
         </div>
-        <div className='w-[40%] bg--500 flex items-center'>
-          <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/>
+        <div className='w-[40%] relative flex items-center'>
+          {/* <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
+          <Image
+            src={"/images/power_place.png"}
+            alt="인기글."
+            fill
+            objectFit="contain"
+            objectPosition="center"
+          />
         </div>
       </div>  
     </div>
