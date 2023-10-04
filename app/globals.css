@@ -21,10 +21,6 @@ html {
   overflow-x: hidden;
 }
 
-body {
-
-}
-
 ::-webkit-scrollbar {
   width: 10px; /* 스크롤바의 너비 */
 }
@@ -33,6 +29,7 @@ body {
   /* background-color: #e3e3e3; */
   /* #e3e3e3 */
 }
+/* re_Z27wJwGp_F496LWtL9VM9RBaSj2Xg5RDi */
 
 ::-webkit-scrollbar-thumb {
   /* 73,79,86,1 */

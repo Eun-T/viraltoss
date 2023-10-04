@@ -64,7 +64,6 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
           </div>
         </div>
         <div className='w-[40%] relative flex items-center'>
-          {/* <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/power_place.png"}
             alt="인기글."
@@ -80,10 +79,6 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
 
 export default Outbox2
 
-const data = [
-  "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
-]
 
 // 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
 

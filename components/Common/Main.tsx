@@ -19,7 +19,7 @@ const Main = (props: Props) => {
     <section className="w-full h-[100vh] relative" id="home">
       <div className="relative w-full bg-white">
         <div className="h-[10vh] bg-white"></div>
-        <div className="w-full h-[80vh] overflow-visible">
+        <div className="w-full z-30 h-[80vh] overflow-visible">
           <div className="h-full relative">
             <Image
               src={"/images/s6.png"}
@@ -34,23 +34,23 @@ const Main = (props: Props) => {
         {/* <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white"></div> */}
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between">
           <div className="mt-[160px] flex flex-col items-center justify-start whitespace-pre-wrap">
-            <h1 className={"text-[90px] font-[700] text-center leading-normal"}>
+            <h1 className="text-[30px] font-[700] text-center leading-normal s:text-[50px] m:text-[70px] l:text-[90px]">
               바이럴 마케팅의 모든것
               {/* 토스에서 쉽고 간편하게 */}
-              <em className="block text-[40px] font-[300]">
+              <em className="block text-[15px] font-[300] s:text-[25px] l:text-[40px] s:text-[35px]">
                 카페,블로그부터 브랜드마케팅까지
               </em>
             </h1>
           </div>
         </div>
         <button
-            className="absolute left-[50%] -translate-x-[50%]"
-            onClick={isArrowDown}
-          >
-            <div className="animate-[buttonShow_3s_ease-in-out_infinite]">
-              <RiArrowDownSFill size="90" color="black" />
-            </div>
-          </button>
+          className="absolute left-[50%] -translate-x-[50%]"
+          onClick={isArrowDown}
+        >
+          <div className="animate-[buttonShow_3s_ease-in-out_infinite]">
+            <RiArrowDownSFill size="90" color="black" />
+          </div>
+        </button>
       </div>
     </section>
   );
