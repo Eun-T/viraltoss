@@ -37,10 +37,10 @@ const Service = () => {
 
   return (
     <section
-      className="w-full bg-[#f4f4f4] pt-[70px] pb-[150px] relative"
+      className="w-full bg-[#f4f4f4] pt-[70px] pb-[70px] s:pb-[150px] relative"
       id="product"
     >
-      <h2 className={"text-center text-[50px] font-[700] mb-[80px] "}>
+      <h2 className="text-center text-[35px] s:text-[50px] font-[700] mb-[60px]">
         All-in-one 서비스
       </h2>
 
@@ -49,18 +49,18 @@ const Service = () => {
       <Outbox3 isOpen={outbox3} setOpen={setOutbox3} />
       <Outbox4 isOpen={outbox4} setOpen={setOutbox4} />
       <Outbox5 isOpen={outbox5} setOpen={setOutbox5} />
-      <div className="w-[92%] max-w-[1140px] mx-auto">
-        <div className="mb-[80px]">
+      <div className="w-[96%] s:w-[92%] max-w-[1140px] mx-auto">
+        <div className="mb-[50px] s:mb-[80px]">
           <motion.div
             initial="offscreen"
             whileInView="onscreen"
             variants={cardVariants}
             viewport={{ once: true }}
           >
-            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
+            <h3 className="text-center text-[20px] s:text-[30px] font-[700] mb-[35px] s:mb-[50px]">
               자영업자를 위한 패키지
             </h3>
-            <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
+            <div className="w-full bg--500 rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
               {/* 0 0 0 0.05rem hsla(214,88%,27%,0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06) */}
 
               <motion.div
@@ -68,13 +68,13 @@ const Service = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div
-                  className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
+                  className="w-[300px] s:w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
                   onClick={(e) => {
                     setOutbox1(true);
                   }}
                 >
                   <Plus />
-                  <div className="w-full h-[220px] relative overflow-hidden">
+                  <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/blog1.jpg"}
@@ -84,9 +84,9 @@ const Service = () => {
                       objectPosition="center"
                     />
                   </div>
-                  <div className="px-[20px] my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[20px]">블로그</h4>
-                    <p>
+                  <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">블로그</h4>
+                    <p className="text-[14px] s:text-[16px]">
                       바이럴 영역에서 경쟁이 치열해지고 있는 블로그 마케팅은
                       광고효과를 기대하기 어려워지고 있습니다. 그러나 우리는
                       타겟에 맞는 인플루언서를 선별하고, 고품질의 블로그
@@ -105,13 +105,13 @@ const Service = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div
-                  className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
+                  className="w-[300px] s:w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
                   onClick={(e) => {
                     setOutbox2(true);
                   }}
                 >
                   <Plus />
-                  <div className="w-full h-[220px] relative overflow-hidden">
+                  <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/naver_power_link.png"}
@@ -121,11 +121,11 @@ const Service = () => {
                       objectPosition="center"
                     />
                   </div>
-                  <div className="px-[20px] my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[20px]">
-                      파워링크/스마트플레이스 등등
+                  <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">
+                      파워링크/스마트플레이스 등
                     </h4>
-                    <p>
+                    <p className="text-[14px] s:text-[16px]">
                       파워링크/스마트플레이스의 기본적인 설명과 세팅을
                       제공합니다. 무작정 비싼 키워드가 아닌 브랜드와 연관된
                       최상의 설정값 맞춰드립니다. 스마트플레이스의 경우 등록부터
@@ -142,13 +142,13 @@ const Service = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div
-                  className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
+                  className="w-[300px] s:w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
                   onClick={(e) => {
                     setOutbox3(true);
                   }}
                 >
                   <Plus />
-                  <div className="w-full h-[220px] relative overflow-hidden">
+                  <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/social_media.png"}
@@ -159,11 +159,11 @@ const Service = () => {
                     />
                     {/* Designed by BiZkettE1 / Freepik */}
                   </div>
-                  <div className="px-[20px] my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[20px]">
+                  <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">
                       SNS 마케팅
                     </h4>
-                    <p>
+                    <p className="text-[14px] s:text-[16px]">
                       SNS 페이지 광고의 핵심은 노출 수만을 추구하는 것이 아니라,
                       실제 구매/방문 가능성을 극대화하는 최상의 페이지에서
                       광고를 전개하는 것입니다. 협력 관계를 맺고 있는
@@ -185,23 +185,23 @@ const Service = () => {
           viewport={{ once: true }}
         >
           <div className="">
-            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
+            <h3 className="text-center text-[20px] s:text-[30px] font-[700] mb-[35px] s:mb-[50px]">
               유튜버를 위한 통합 서비스
             </h3>
 
-            <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
+            <div className="w-full bg--500 rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div
-                  className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
+                  className="w-[300px] s:w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
                   onClick={(e) => {
                     setOutbox4(true);
                   }}
                 >
                   <Plus />
-                  <div className="w-full h-[220px] relative overflow-hidden">
+                  <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/youtuber123.png"}
@@ -211,11 +211,11 @@ const Service = () => {
                       objectPosition="center"
                     />
                   </div>
-                  <div className="px-[20px] my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[20px]">
+                  <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">
                       유튜브 컨설팅
                     </h4>
-                    <p>
+                    <p className="text-[14px] s:text-[16px]">
                       스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
                       있습니다. 그러기 위해서는 최신 유튜브 알고리즘을 이해할
                       필요는 없습니다. SEO, CTR, APV와 같은 용어보다는 성공적인
@@ -230,13 +230,13 @@ const Service = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <div
-                  className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
+                  className="w-[300px] s:w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer relative"
                   onClick={(e) => {
                     setOutbox5(true);
                   }}
                 >
                   <Plus />
-                  <div className="w-full h-[220px] relative overflow-hidden">
+                  <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       src={"/images/popularity.png"}
@@ -246,9 +246,9 @@ const Service = () => {
                       objectPosition="center"
                     />
                   </div>
-                  <div className="px-[20px] my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[20px]">인기글</h4>
-                    <p>
+                  <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">인기글</h4>
+                    <p className="text-[14px] s:text-[16px]">
                       새로운 구독자를 확보하고 싶으신가요? 저희는 유튜브 영상을
                       캡처해서 흥미로운 짤을 만듭니다. 이 짤을 국내 다양한
                       온라인 커뮤니티에 게시하여 인기글 게시판에 노출시킴으로써

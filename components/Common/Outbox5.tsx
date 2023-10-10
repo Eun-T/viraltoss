@@ -22,24 +22,23 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
   }, [isOpen]);
 
   return isOpen ? (
-    <div className="fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-">
+    <div className="fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center">
       <div
-        className="w-full h-full bg-black opacity-50 absolute"
+        className="w-full h-full bg-black opacity-60 absolute"
         onClick={(e) => {
           setOpen(false);
         }}
       ></div>
-      <div className="bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col">
+      <div className="bg-white overflow-y-scroll h-[400px] s:h-[480px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col" id="outbox">
         <div
-          className="absolute z-[300] top-[30px] right-[30px] cursor-pointer"
+          className="absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer"
           onClick={() => {
             setOpen(false);
           }}
         >
           <TfiClose size="40" />
         </div>
-        <div className="absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]"></div>
-        <div className="w-[60%] bg--500">
+        <div className="l:max-w-[60%]">
           <div className="break-keep">
             <h4 className="text-[22px] font-[700]">인기글</h4>
             <div className="w-full h-[1px] bg-black my-[7px]"></div>
@@ -78,7 +77,7 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
             </h5>
           </div>
         </div>
-        <div className="w-[40%] relative flex items-center">
+        <div className="hidden w-[40%] relative l:flex items-center">
           {/* <img
             src="images/community3.png"
             alt="blog_top"

@@ -23,18 +23,17 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
   }, [isOpen]);
   
   return isOpen ? (
-    <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
-      <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
+    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
+      <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
-      <div className='absolute z-[300] top-[30px] right-[30px] cursor-pointer' onClick={() => {
+      <div className='bg-white overflow-y-scroll h-[400px] s:h-[510px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
+      <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
-          <TfiClose size="40"/>
+          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
         </div>
-        <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
-        <div className='w-[60%] bg--500'>
+        <div className='l:max-w-[60%]'>
           <div className='break-keep leading-[1.6]'>
             <h4 className='text-[22px] font-[700]'>SNS 마케팅</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
@@ -42,14 +41,14 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
               스마트폰 출시 이후, SNS 마케팅은 더 이상 선택 사항이 아닌 필수가 되었습니다.
               왜냐하면 SNS를 통한 마케팅은 브랜드 신뢰도와 인지도를 상승시키는데 효과적인 전략이기 때문입니다.
               인스타그램,페이스북,트위터 등 많은 플랫폼을 통해 소비자들에게 친밀한 이미지를 제공할 수 있죠.
-              <span className='text-green-700'>그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?</span>
+              <span className='text-green-700'>&nbsp;그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?</span>
             </h5>
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 유명 인플루언서와 협업을 통한 마케팅</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 브랜드 채널 개설 및 운영</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 고객님의 SNS 계정 관리</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅</span><br />
             <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 인스타그램, 페이스북 등 SNS 자체 광고를 위한 사진 촬영 및 편집</span><br />
-            <h5 className='mb-[7px]'>
+            <h5 className=''>
               등이 있습니다.<br />
               저희는 단순히 외주를 주는 것이 아니라 소통과 협력을 통해 언제든지 수정이 가능합니다.
               이 서비스는 <span className='text-blue-400'>블로그와 파워링크등 다른 마케팅 채널을 원하시는 분, 저렴한 비용으로 높은 효과를 원하시는 분</span>에게 추천드립니다.
@@ -57,10 +56,10 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
             </h5>
           </div>
         </div>
-        <div className='w-[40%] relative flex items-center'>
+        <div className='hidden w-[40%] relative l:flex items-center'>
           {/* <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
-            src={"/images/power_place.png"}
+            src={"/images/sns4.png"}
             alt="인기글."
             fill
             objectFit="contain"

@@ -12,8 +12,6 @@ type Outbox = {
 
 const Outbox = ({isOpen,setOpen}: Outbox) => {
 
-  const [isScrollLocked, setScrollLocked] = useState(false);
-
   // 모달 열릴 때
   useEffect(() => {
     if (isOpen) {
@@ -26,34 +24,34 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
   }, [isOpen]);
 
   return isOpen ? (
-    <div className={'fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center '}>
+    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
       <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
       {/* border-[15px] border-black box-border */}
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
-        <div className='absolute top-[30px] z-[300] right-[30px] cursor-pointer' onClick={() => {
+      <div className='bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
+        <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
-          <TfiClose size="40"/>
+          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
         </div>
-        <div className='w-[60%] bg--500'>
+        <div className='l:max-w-[60%]'>
           <div className='break-keep'>
             <h4 className='text-[22px] font-[700]'>블로그 마케팅이란?</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[5px]'>
+            <h5 className='mb-[10px] l:mb-[5px]'>
                 대다수의 자영업자들이 블로그 마케팅의 필요성을 느끼고 활용하고 있습니다.<br />
                 그러나 마케팅의 효과를 극대화하려면 어떻게 해야 할까요? 
                 바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
             </h5>
             <span className='font-[600] text-[18px]'>1. 절대로 외부업제를 사용하지 않습니다</span>
-            <h5 className='mb-[5px]'>
+            <h5 className='mb-[10px] l:mb-[5px]'>
                 - 다른 바이럴 회사들이 <span className='text-red-500'>'블로그 상위노출 100%'</span>라고 광고하는 경우가 많습니다. 하지만 이는 틀렸습니다.
                 서울대,카이스트 등 한국 최고의 대학 출신 석박사들이 개발한 프로그램을 뚫고 상위노출이 100% 가능할 거라고 생각하십니까?
                 블로그의 최상단 노출은 오로지 네이버의 로직 시스템에 의해 결정됩니다. 따라서 시스템의 기준을 충족시키는 것이 핵심입니다. 이 과정을 상세히 설명하고 질의응답 시간을 가집니다.<br />
             </h5>
             <span className='font-[600] text-[18px]'>2. 템플릿과 형식을 활용합니다</span>
-            <h5 className='mb-[5px]'>
+            <h5 className='mb-[10px] l:mb-[5px]'>
                 - 블로그 마케팅을 이용할 때의 문제점은 글을 무분별하게 작성하는 경우입니다. 글은 논리적으로 작성되어야 하며 <span className='text-blue-500'>본문과 연관된 키워드와 사진</span>을 첨부해야 네티즌들이 손쉽게 정보를 받아드립니다. 양식에서 고객님들이 변경하고 싶은 부분은 언제든지 수정이 가능하며, 결과적으로 깔끔하고 눈에 띄는 글을 작성할 수 있습니다.<br />
             </h5>
             <span className='font-[600] text-[18px]'>3. 노하우를 드립니다.</span>
@@ -63,7 +61,7 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
             </h5>
           </div>
         </div>
-        <div className='w-[40%] relative flex items-center'>
+        <div className='hidden w-[40%] relative l:flex items-center'>
           {/* <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/blog_top.png"}

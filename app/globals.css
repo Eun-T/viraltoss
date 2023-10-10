@@ -21,6 +21,22 @@ html {
   overflow-x: hidden;
 }
 
+
+
+#outbox::-webkit-scrollbar {
+  background-color: transparent;
+  color: transparent;
+  /* display: none; */
+  /* width: 0; */
+}
+
+#outbox::-webkit-scrollbar-thumb  {
+  background-color: transparent;
+  color: transparent;
+  display: none;
+  /* width: 0; */
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* 스크롤바의 너비 */
 }
@@ -33,17 +49,13 @@ html {
 
 ::-webkit-scrollbar-thumb {
   /* 73,79,86,1 */
-  background-color: rgb(102, 102, 102);
+  background-color: #3182F6;
   border-radius: 8px;
 }
 
 ::selection {
   color: white;
-  background-color: rgb(102, 102, 102);
+  background-color: #3182F6
 }
 
-/* @font-face {
-  font-family: "Pretendard";
-  font-weight: normal;
-  src: url("/fonts/Pretendard-Medium.woff") format("truetype");
-} */
+/* rgb(102, 102, 102); */

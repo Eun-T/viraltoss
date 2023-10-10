@@ -23,22 +23,21 @@ const Outbox4 = ({isOpen,setOpen}: Outbox) => {
   }, [isOpen]);
 
   return isOpen ? (
-    <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center overflow-'>
+    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
       <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
-      <div className='absolute z-[300] top-[30px] right-[30px] cursor-pointer' onClick={() => {
+      <div className='bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
+      <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
-          <TfiClose size="40"/>
+          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
         </div>
-        <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
-        <div className='w-[60%] bg--500'>
+        <div className='l:max-w-[60%]'>
           <div className='break-keep'>
             <h4 className='text-[22px] font-[700]'>유튜브 컨설팅</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
-              <h5 className='mb-[7px]'>
+              <h5 className='mb-[10px] l:mb-[7px]'>
                 수백만원 짜리 컨설팅 강의를 듣고 계신가요?
                 유료 VOD 및 전자책을 읽고 계신가요?<br />
                 조회수와 구독자가 증가하지 않아 걱정하시거나 채널 운영에 어려움을 겪고 있다면,
@@ -48,7 +47,7 @@ const Outbox4 = ({isOpen,setOpen}: Outbox) => {
                 그 방법은 다음과 같습니다.
               </h5>
               <span className='font-[600] text-[18px]'>1. 객관적인 자료로 문제 해설</span>
-              <h5 className='mb-[7px]'>
+              <h5 className='mb-[10px] l:mb-[7px]'>
                 - 어려운 용어를 피하고 차트와 데이터를 사용하여 기술적 분석을 실시합니다.
                 <span className='text-red-500'>'왜 구독자 수가 정체되었는지'
                 '조회수가 낮은 이유가 무엇인지' 등</span>을 제3자의 시각으로 바라보고 크리에이터에게 필요한 부분을 설명드립니다.
@@ -56,19 +55,19 @@ const Outbox4 = ({isOpen,setOpen}: Outbox) => {
                 결코 쉬운일은 아니지만 사람들이 맞춤 컨설팅을 찾는 이유랍니다.
               </h5>
               <span className='font-[600] text-[18px]'>2. 새로운 수익 구조</span>
-              <h5 className='mb-[7px]'>
+              <h5 className='mb-[10px] l:mb-[7px]'>
                 - 고객님의 채널을 면밀히 분석하여 광고 수익 외에도 <span className='text-blue-400'>새로운 비즈니스 모델</span>을 찾아냅니다.
                 경제적인 안정감을 위해서는 다양한 수익 경로가 필요합니다.
               </h5>
               <span className='font-[600] text-[18px]'>3. 채널의 방향성을 잡아드립니다</span>
-              <h5 className='mb-[7px]'>
+              <h5 className=''>
                 - 컨설팅의 핵심은 고객님에게 자신감을 불어넣어 도전할 수 있도록 하는 것입니다.
                 따라서 유튜브의 <span className='text-green-700'>방향성을 위해서 채널 목적에 맞는 어떤 컨셉을 잡고 나아가야하는지를 함께 의논하고 소통</span>하는 시간을 가지게 됩니다.
                 구독자 니즈를 충족시킬 다양한 아이템을 가지고 있으니 언제든지 믿고 맡겨주시면 감사합니다.
               </h5>
           </div>
         </div>
-        <div className='w-[40%] relative flex items-center'>
+        <div className='hidden w-[40%] relative l:flex items-center'>
           {/* <img src="images/youtube_consulting.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/youtube_consulting.png"}

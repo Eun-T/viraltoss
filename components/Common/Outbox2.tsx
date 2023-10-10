@@ -23,47 +23,46 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
   }, [isOpen]);
 
   return isOpen ? (
-    <div className='fixed w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
-      <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
+    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
+      <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
         setOpen(false)
       }}></div>
-      <div className='bg-white w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex xl:w-[600px] xl:h-[500px] xl:flex-col'>
-        <div className='absolute z-[300] top-[30px] right-[30px] cursor-pointer' onClick={() => {
+      <div className='bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
+        <div className='absolute top-[33px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
           setOpen(false)
         }}>
-          <TfiClose size="40"/>
+          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
         </div>
-        <div className='absolute bottom-[12px] rounded-[10px] left-[50%] -translate-x-[50%] bg-[#bebebe] w-[150px] h-[3px] animate-[barUp_3s_ease-in-out_infinite]'></div>
-        <div className='w-[60%] bg--500'>
+        <div className='l:max-w-[60%]'>
           <div className='break-keep'>
-            <h4 className='text-[22px] font-[700]'>네이버 파워링크/스마트플레이스</h4>
+            <h4 className='text-[22px] font-[700]'>파워링크/스마트플레이스</h4>
             <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[7px]'>
+            <h5 className='mb-[10px] l:mb-[5px]'>
               파워링크와 스마트플레이스는 네이버 마케팅에서 필수적인 구성 요소입니다.<br />
               엄청난 효과를 내기보다는 브랜드 이미지와 전문성을 강조할 수 있기에 선택이 아닌 필수가 되는거죠
               그렇다면 바이럴토스는 어떻게 업무를 진행할까요?
             </h5>
             <span className='font-[600] text-[18px]'>1. 마케팅 용어 설명</span>
-            <h5 className='mb-[7px]'>- 네이버 마케팅에서 사용되는 용어들인 <span className='text-blue-500'> CPC, 키워드, 입찰가 등</span>을 간단하고 이해하기 쉽게 설명해 드립니다.</h5>
+            <h5 className='mb-[10px] l:mb-[7px]'>- 네이버 마케팅에서 사용되는 용어들인 <span className='text-blue-500'> CPC, 키워드, 입찰가 등</span>을 간단하고 이해하기 쉽게 설명해 드립니다.</h5>
             <span className='font-[600] text-[18px]'>2. 최적의 키워드를 사용</span>
-            <h5 className='mb-[7px]'>
+            <h5 className='mb-[10px] l:mb-[7px]'>
               - 고객님의 음식점/회사를 홍보하기 위해서는 그 성격에 맞는 키워드를 적어야합니다.
               그렇지 않으면 파워링크의 경우 상당한 광고비용을 지불해야 되고 스마트플레이스의 경우에는 순위하락으로 이어집니다.&nbsp;
               <span className='text-green-600'>키워드 선택과 함께 이미지와 홍보 문구 등</span>을 조합하여 광고 효과를 극대화합니다. <br />
               또한 경쟁사의 중복/악성클릭에 대한 설명과 해결방안을 제공합니다.
             </h5>
             <span className='font-[600] text-[18px]'>3. 세팅 이후 대행사 없이 직접 운영하는 법</span>
-            <h5 className='mb-[7px]'>
+            <h5 className=''>
               - 파워링크/스마트플레이스 전부 세팅하기 위해서 설정할 수 있는 기능들이 정말 많습니다.
               부적절한 설정은 각 기능들이 따로 놀게 되고 광고의 효율성이 타업체에 비해 떨어져서 매출 하락으로 이어지죠.
-              <span className='text-red-500'>예를 들어 '여성의류'키워드 대신 '여성데일리룩코디'와 같은 검색 가능성이 낮은 키워드를 설정하면 손해만 보게 됩니다.</span>&nbsp;
+              <span className='text-red-500'>&nbsp;예를 들어 '여성의류'키워드 대신 '여성데일리룩코디'와 같은 검색 가능성이 낮은 키워드를 설정하면 손해만 보게 됩니다.</span>&nbsp;
               바이럴토스는 최소한의 비용으로 최대한의 효과를 얻을 수 있는 고객님에 맞는 세팅을 설정해주고 이전에 알지 못한 유용한 팁을 공유합니다.<br />
               마지막으로, 대행사를 통하지 않고 직접 운영하고 관리하는 방법에 대한 안내도 제공합니다.
             </h5>
             <span className='font-[600] text-[18px]'></span>
           </div>
         </div>
-        <div className='w-[40%] relative flex items-center'>
+        <div className='hidden w-[40%] relative l:flex items-center'>
           <Image
             src={"/images/power_place.png"}
             alt="인기글."

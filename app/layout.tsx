@@ -1,3 +1,4 @@
+import Header from "@/components/Common/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -15,9 +16,17 @@ export const helvetica = localFont({
   weight:'100 900'
 })
 
+export const jalnan = localFont({
+  src: "./fonts/Jalnan.ttf",
+  weight:'100 900'
+})
+
 export const metadata: Metadata = {
-  title: "ViralToss",
-  description: "",
+  title: "바이럴토스",
+  description: "바이럴마케팅을 원하시나요? 카페,블로그,브랜드마케팅 그리고 컨설팅까지! 소규모 정예로 이루어진 전문가에게 맡기세요. 언제든지 연락만 주시면 바이럴토스는 고객님을 직접 찾아갑니다.",
+  icons: {
+    icon: "/favicon/favi32.png",
+  },
 };
 
 export default function RootLayout({
