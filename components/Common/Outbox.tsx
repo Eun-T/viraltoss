@@ -12,6 +12,11 @@ type Outbox = {
 
 const Outbox = ({isOpen,setOpen}: Outbox) => {
 
+  const imageStyle = {
+    objectFit:'cover',
+    objectPosition:'center',
+  } as React.CSSProperties
+
   // 모달 열릴 때
   useEffect(() => {
     if (isOpen) {
@@ -64,11 +69,10 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
         <div className='hidden w-[40%] relative l:flex items-center'>
           {/* <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
-            src={"/images/blog_top.png"}
+            src={"/images/Group 12.png"}
             alt="인기글."
             fill
-            objectFit="contain"
-            objectPosition="center"
+            style={imageStyle}
           />
         </div>
       </div>  

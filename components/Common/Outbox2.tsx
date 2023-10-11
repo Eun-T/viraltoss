@@ -12,6 +12,11 @@ type Outbox = {
 
 const Outbox2 = ({isOpen,setOpen}: Outbox) => {
 
+  const imageStyle = {
+    objectFit:'cover',
+    objectPosition:'center',
+  } as React.CSSProperties
+
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
@@ -67,8 +72,7 @@ const Outbox2 = ({isOpen,setOpen}: Outbox) => {
             src={"/images/power_place.png"}
             alt="인기글."
             fill
-            objectFit="contain"
-            objectPosition="center"
+            style={imageStyle}
           />
         </div>
       </div>  

@@ -20,7 +20,7 @@ const Friend = (props: Props) => {
           <div className="flex flex-col s:flex-row justify-center items-center gap-[20px]">
             <Link
               href="http://pf.kakao.com/_xlqtdG/chat"
-              className="flex items-center px-[55px] py-[15px] l:px-[65px] l:py-[20px] rounded-[50px] bg-[#efd74f] text-[#000300]"
+              className="flex items-center px-[55px] py-[15px] l:px-[65px] l:py-[20px] rounded-[50px] bg-[#fcd94a] text-[#000300]"
             >
               <Image
                 src={"/images/talk_consulting.png"}

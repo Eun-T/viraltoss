@@ -1,6 +1,7 @@
 "use client";
 
 import { helvetica } from "@/app/layout";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -49,7 +50,19 @@ const Nav = () => {
               helvetica.className
             }
           >
-            <img
+            <a href="/">
+              <Image
+                src={
+                  scrolled
+                    ? "/images/바이럴토스 (4).svg"
+                    : "/images/바이럴토스 (3).svg"
+                }
+                width={100}
+                height={100}
+                alt={"바이럴토스"}
+              />
+            </a>
+            {/* <img
               src={
                 scrolled
                   ? "/images/바이럴토스 (4).svg"
@@ -57,7 +70,7 @@ const Nav = () => {
               }
               alt=""
               className="w-[100px]"
-            />
+            /> */}
           </div>
 
           {/* 진짜 navbar */}

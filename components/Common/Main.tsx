@@ -58,7 +58,7 @@ const Main = (props: Props) => {
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
           <div className="flex flex-col items-center justify-start whitespace-pre-wrap">
             <h1 className="text-[30px] font-[700] text-center leading-normal s:text-[50px] m:text-[70px] l:text-[90px]">
-              바이럴 마케팅의 모든것
+              바이럴 마케팅의 모든 것
               <em className="not-italic block text-[15px] font-[300] s:text-[25px] l:text-[40px]">
                 <span
                   className={

@@ -35,6 +35,11 @@ const Service = () => {
   const [outbox5, setOutbox5] = useState<boolean>(false);
   const [plus, setPlus] = useState<boolean>(false);
 
+  const imageStyle = {
+    objectFit:'cover',
+    objectPosition:'center',
+  } as React.CSSProperties
+
   return (
     <section
       className="w-full bg-[#f4f4f4] pt-[70px] pb-[70px] s:pb-[150px] relative"
@@ -77,11 +82,11 @@ const Service = () => {
                   <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
-                      src={"/images/blog1.jpg"}
                       alt="블로그."
+                      src={"/images/blog1.jpg"}
+                      // sizes="100vw"
                       fill
-                      objectFit="contain"
-                      objectPosition="center"
+                      style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
@@ -117,8 +122,7 @@ const Service = () => {
                       src={"/images/naver_power_link.png"}
                       alt="네이버 파워 링크,스마트플레이스."
                       fill
-                      objectFit="cover"
-                      objectPosition="center"
+                      style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
@@ -154,8 +158,7 @@ const Service = () => {
                       src={"/images/social_media.png"}
                       alt="SNS."
                       fill
-                      objectFit="contain"
-                      objectPosition="center"
+                      style={imageStyle}
                     />
                     {/* Designed by BiZkettE1 / Freepik */}
                   </div>
@@ -207,8 +210,7 @@ const Service = () => {
                       src={"/images/youtuber123.png"}
                       alt="유튜브."
                       fill
-                      objectFit="contain"
-                      objectPosition="center"
+                      style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
@@ -242,8 +244,7 @@ const Service = () => {
                       src={"/images/popularity.png"}
                       alt="인기글."
                       fill
-                      objectFit="contain"
-                      objectPosition="center"
+                      style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">

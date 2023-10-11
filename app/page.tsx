@@ -1,4 +1,4 @@
-import Channel from "@/components/Common/Channel";
+// import Channel from "@/components/Common/Channel";
 import Explanation from "@/components/Common/Explanation";
 import Friend from "@/components/Common/Friend";
 import Header from "@/components/Common/Header";
@@ -20,7 +20,7 @@ export default function Home() {
         <Youtuber />
         <Explanation />
         <Friend />
-        <Channel />
+        {/* <Channel /> */}
       </main>
       <Footer />
     </div>

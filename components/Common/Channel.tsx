@@ -1,64 +1,67 @@
-"use client";
+// "use client";
 
-import { useEffect } from "react";
-import Image from "next/image";
+// import { useEffect } from "react";
+// import Image from "next/image";
 
-declare global {
-  interface Window {
-    Kakao: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     Kakao: any;
+//   }
+// }
 
-const addKakaoTalkChannelButton = () => {
+// const addKakaoTalkChannelButton = () => {
 
-  const addKakaoChannel = () => {
-    // if (window.Kakao) {
-    //   //카카오 스크립트가 로드된 경우
-    //   const kakao = window.Kakao;
+//   const addKakaoChannel = () => {
+//     // if (window.Kakao) {
+//     //   //카카오 스크립트가 로드된 경우
+//     //   const kakao = window.Kakao;
 
-    //   //인증이 안되어있는 경우 인증한다.
-    //   if (!kakao.isInitialized()) {
-    //     kakao.init("sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN"); // 카카오에서 제공받은 javascript key를 넣어줌 -> .env파일에서 호출시킴
-    //   }
-    // }
+//     //   //인증이 안되어있는 경우 인증한다.
+//     //   if (!kakao.isInitialized()) {
+//     //     kakao.init("sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN"); // 카카오에서 제공받은 javascript key를 넣어줌 -> .env파일에서 호출시킴
+//     //   }
+//     // }
 
-    window.Kakao.Channel.addChannel({
-      channelPublicId: '_xlqtdG', //카카오 채널 ID
-    });
-  }; 
+//     window.Kakao.Channel.addChannel({
+//       channelPublicId: '_xlqtdG', //카카오 채널 ID
+//     });
+//   }; 
 
-  window.kakaoAsyncInit = function () {
-  };
-  (function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.channel.min.js";
-    js.integrity =
-      "sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN";
-    js.crossOrigin = "anonymous";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "kakao-js-sdk");
+//   window.kakaoAsyncInit = function () {
+//   };
+//   (function (d, s, id) {
+//     var js,
+//       fjs = d.getElementsByTagName(s)[0];
+//     if (d.getElementById(id)) return;
+//     js = d.createElement(s);
+//     js.id = id;
+//     js.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.channel.min.js";
+//     js.integrity =
+//       "sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN";
+//     js.crossOrigin = "anonymous";
+//     fjs.parentNode.insertBefore(js, fjs);
+//   })(document, "script", "kakao-js-sdk");
 
-  return (
-    <>
-      <div id="kakao-talk-channel-add-button" onClick={addKakaoChannel} className="fixed bottom-[40px] right-[40px] z-[200] cursor-pointer">
-        <Image
-          src={"/images/kakao.png"}
-          alt="youtube"
-          objectFit="contain"
-          width={90}
-          height={90}
-          className="rounded-[50px]"
-        />
-      </div>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <div id="kakao-talk-channel-add-button" onClick={addKakaoChannel} className="fixed bottom-[40px] right-[40px] z-[200] cursor-pointer">
+//         <Image
+//           src={"/images/kakao.png"}
+//           alt="youtube"
+//           objectFit="contain"
+//           width={90}
+//           height={90}
+//           className="rounded-[50px]"
+//         />
+//       </div>
+//     </>
+//   );
+// };
 
-export default addKakaoTalkChannelButton;
+// export default addKakaoTalkChannelButton;
+
+// NEXT_PUBLIC_CHANNELPUBLIC_ID="_xlqtdG"
+// NEXT_PUBLIC_INIT_ID="sha384-bg2pMhokxyx1zeEM2ol2hJtBagKMjRIZDVI/KITe+j2U5K+Or6HPY1lWDWY8ubEN"
 
 // window.kakaoAsyncInit = function() {
 //   Kakao.Channel.createAddChannelButton({

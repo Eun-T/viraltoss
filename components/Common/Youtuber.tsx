@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -9,7 +9,7 @@ type Props = {};
 const cardVariants = {
   offscreen: {
     y: 150,
-    opacity: 0
+    opacity: 0,
   },
   onscreen: {
     y: 0,
@@ -17,15 +17,15 @@ const cardVariants = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const cardVariants1 = {
   offscreen: {
     x: -500,
-    opacity: 0
+    opacity: 0,
   },
   onscreen: {
     x: 0,
@@ -33,15 +33,15 @@ const cardVariants1 = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const cardVariants2 = {
   offscreen: {
     x: 500,
-    opacity: 0
+    opacity: 0,
   },
   onscreen: {
     x: 0,
@@ -49,27 +49,41 @@ const cardVariants2 = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const Youtuber = (props: Props) => {
+
+  const imageStyle = {
+    objectFit: "cover",
+    objectPosition: "top",
+  } as React.CSSProperties;
+
+  const imageStyle1 = {
+    objectFit: "cover",
+    objectPosition: "center",
+  } as React.CSSProperties;
+
   return (
     <section className="w-full py-[100px] l:py-[125px]" id="service">
       <div className="w-[92%] max-w-[1140px] mx-auto">
-
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
           variants={cardVariants}
           viewport={{ once: true }}
         >
-          <h2 className={"text-[30px] s:text-[40px] l:text-[50px] font-[700] break-keep text-center mb-[60px] s:mb-[80px] l:mb-[100px]"}>
-              다음과 같은 분을 모십니다
+          <h2
+            className={
+              "text-[30px] s:text-[40px] l:text-[50px] font-[700] break-keep text-center mb-[60px] s:mb-[80px] l:mb-[100px]"
+            }
+          >
+            다음과 같은 분을 모십니다
           </h2>
         </motion.div>
-        
+
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
@@ -78,12 +92,17 @@ const Youtuber = (props: Props) => {
         >
           <div className="gap-[20px] m:gap-[30px] l:gap-[50px] flex flex-col l:flex-row justify-center items-center mb-[100px]">
             <div className="text-center w-fit s:w-[500px] s:min-w-[400px] l:order-2">
-              <h5 className="text-[#3182F6] uppercase text-[14px]">restaurant</h5>
-              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px]  text-[#191f28]">카페/음식점</h3>
+              <h5 className="text-[#3182F6] uppercase text-[14px]">
+                restaurant
+              </h5>
+              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px]  text-[#191f28]">
+                카페/음식점
+              </h3>
               <div className="text-center">
                 <h4 className="text-[#6b7684] font-[500] text-[16px] m:text-[20px] w-[100%] s:w-[82%] s:ml-[80px] m:mx-auto l:ml-auto text-start">
                   &middot; 블로그,카페 등 바이럴마케팅을 원하시는 분<br />
-                  &middot; 카페/음식점 홍보에 대한 전문 컨설턴트가 필요할 때<br />
+                  &middot; 카페/음식점 홍보에 대한 전문 컨설턴트가 필요할 때
+                  <br />
                   &middot; 최근 창업하셔서 마케팅에 대한 경험이 부족한 분
                 </h4>
                 {/* <h5 className="text-[#6b7684]">
@@ -92,7 +111,12 @@ const Youtuber = (props: Props) => {
               </div>
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-va opacity-[0.75] relative">
-              <Image src={"/images/cafe.jpg"} alt="소규모 자영업자." fill objectFit="cover" objectPosition="top"/>
+              <Image
+                src={"/images/cafe.jpg"}
+                alt="소규모 자영업자."
+                fill
+                style={imageStyle}
+              />
             </div>
           </div>
         </motion.div>
@@ -107,7 +131,9 @@ const Youtuber = (props: Props) => {
           <div className="gap-[20px] m:gap-[30px] l:gap-[50px] flex flex-col l:flex-row justify-center items-center mb-[100px]">
             <div className="text-center w-fit s:w-[500px] s:min-w-[400px]">
               <h5 className="text-[#3182F6] uppercase text-[14px]">Youtuber</h5>
-              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px] text-[#191f28]">유튜버</h3>
+              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px] text-[#191f28]">
+                유튜버
+              </h3>
               <div className="text-center">
                 <h4 className="text-[#6b7684] font-[500] text-[16px] m:text-[20px] w-[100%] s:w-[82%] s:ml-[80px] m:mx-auto l:ml-auto text-start">
                   &middot; 예산이 부족해 바이럴을 망설이시는 분<br />
@@ -125,7 +151,12 @@ const Youtuber = (props: Props) => {
                 alt="sad"
                 className="w-full min-w-[400px]"
               /> */}
-              <Image src={"/images/youtuber.jpg"} alt="유튜버." fill objectFit="cover" objectPosition="top"/>
+              <Image
+                src={"/images/youtuber.jpg"}
+                alt="유튜버."
+                fill
+                style={imageStyle}
+              />
             </div>
           </div>
           {/* Designed by Freepik */}
@@ -139,13 +170,21 @@ const Youtuber = (props: Props) => {
         >
           <div className="gap-[20px] m:gap-[30px] l:gap-[50px] flex flex-col l:flex-row justify-center items-center">
             <div className="text-center l:order-2 w-fit s:w-[500px] s:min-w-[400px]">
-              <h5 className="text-[#3182F6] uppercase text-[14px]">enterprise</h5>
-              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px] text-[#191f28]">중소/중견기업</h3>
+              <h5 className="text-[#3182F6] uppercase text-[14px]">
+                enterprise
+              </h5>
+              <h3 className="text-[30px] m:text-[40px] font-[700] mb-[20px] text-[#191f28]">
+                중소/중견기업
+              </h3>
               <div className="text-start">
                 <h4 className="text-[#6b7684] font-[500] text-[16px] m:text-[20px] w-[100%] s:w-[82%] s:ml-[80px] m:mx-auto l:ml-auto text-start break-keep">
                   &middot; 자사 제품의 홍보를 원하시는 분<br />
-                  &middot; 종합적인 온라인 홍보를 위해 유튜브,블로그 등을<br/>&nbsp;&nbsp;활용할 때<br />
-                  &middot; 신뢰성 높은 바이럴전문가와 직접 대면해서<br/>&nbsp;&nbsp;마케팅에 대해 논의하고 싶을 때
+                  &middot; 종합적인 온라인 홍보를 위해 유튜브,블로그 등을
+                  <br />
+                  &nbsp;&nbsp;활용할 때<br />
+                  &middot; 신뢰성 높은 바이럴전문가와 직접 대면해서
+                  <br />
+                  &nbsp;&nbsp;마케팅에 대해 논의하고 싶을 때
                 </h4>
                 {/* <h5 className="text-[#6b7684] text-center">
                   &nbsp;&nbsp;(모니터/태블릿 같은 전자제품 환영)
@@ -158,7 +197,12 @@ const Youtuber = (props: Props) => {
                 alt="sad"
                 className="w-full min-w-[400px]"
               /> */}
-              <Image src={"/images/enterprise.jpg"} alt="중소/중견기업." fill objectFit="cover" objectPosition="center"/>
+              <Image
+                src={"/images/enterprise.jpg"}
+                alt="중소/중견기업."
+                fill
+                style={imageStyle1}
+              />
             </div>
           </div>
           {/* Designed by brgfx / Freepik */}
