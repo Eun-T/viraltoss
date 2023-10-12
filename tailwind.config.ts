@@ -8,16 +8,6 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      // '2xl': {'max': '1400px'},
-
-      // 'xl': {'max': '1080px'},
-
-      // 'lg': {'max': '880px'},
-
-      // 'md': {'max': '767px'},
-
-      // 'sm': {'max': '680px'}, 
-
       's': '480px', 
       'm': '768px', 
       'l': '1024px', 

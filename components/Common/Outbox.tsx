@@ -1,72 +1,110 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
 
 type Outbox = {
-  isOpen: boolean,
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
+  isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const imageStyle = {
+  objectFit: "contain",
+  objectPosition: "center",
+} as React.CSSProperties;
 
 // 3. 솔직하고 정직하게
-// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
+// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
 
-const Outbox = ({isOpen,setOpen}: Outbox) => {
-
-  const imageStyle = {
-    objectFit:'cover',
-    objectPosition:'center',
-  } as React.CSSProperties
-
+const Outbox = ({ isOpen, setOpen }: Outbox) => {
   // 모달 열릴 때
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
-      document.documentElement.style.overflowY = 'hidden';
+      document.documentElement.style.overflowY = "hidden";
     } else {
       // 스크롤을 다시 활성화
-      document.documentElement.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
     }
   }, [isOpen]);
 
   return isOpen ? (
-    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
-      <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
-        setOpen(false)
-      }}></div>
+    <div className="fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center">
+      <div
+        className="w-full h-full bg-black opacity-60 absolute"
+        onClick={(e) => {
+          setOpen(false);
+        }}
+      ></div>
       {/* border-[15px] border-black box-border */}
-      <div className='bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
-        <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
-          setOpen(false)
-        }}>
-          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
+      <div
+        className="bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col"
+        id="outbox"
+      >
+        <div
+          className="absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer"
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <TfiClose className="text-[25px] s:text-[33px] l:text-[40px]" />
         </div>
-        <div className='l:max-w-[60%]'>
-          <div className='break-keep'>
-            <h4 className='text-[22px] font-[700]'>블로그 마케팅이란?</h4>
-            <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[10px] l:mb-[5px]'>
-                대다수의 자영업자들이 블로그 마케팅의 필요성을 느끼고 활용하고 있습니다.<br />
-                그러나 마케팅의 효과를 극대화하려면 어떻게 해야 할까요? 
-                바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
+        <div className="l:max-w-[60%]">
+          <div className="break-keep">
+            <h4 className="text-[22px] font-[700]">블로그 마케팅이란?</h4>
+            <div className="w-full h-[1px] bg-black my-[7px]"></div>
+            <h5 className="mb-[10px] l:mb-[5px]">
+              대다수의 자영업자들이 블로그 마케팅의 필요성을 느끼고 활용하고
+              있습니다.
+              <br />
+              그러나 마케팅의 효과를 극대화하려면 어떻게 해야 할까요?
+              바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
             </h5>
-            <span className='font-[600] text-[18px]'>1. 절대로 외부업제를 사용하지 않습니다</span>
-            <h5 className='mb-[10px] l:mb-[5px]'>
-                - 다른 바이럴 회사들이 <span className='text-red-500'>'블로그 상위노출 100%'</span>라고 광고하는 경우가 많습니다. 하지만 이는 틀렸습니다.
-                서울대,카이스트 등 한국 최고의 대학 출신 석박사들이 개발한 프로그램을 뚫고 상위노출이 100% 가능할 거라고 생각하십니까?
-                블로그의 최상단 노출은 오로지 네이버의 로직 시스템에 의해 결정됩니다. 따라서 시스템의 기준을 충족시키는 것이 핵심입니다. 이 과정을 상세히 설명하고 질의응답 시간을 가집니다.<br />
+            <span className="font-[600] text-[18px]">
+              1. 절대로 외부업제를 사용하지 않습니다
+            </span>
+            <h5 className="mb-[10px] l:mb-[5px]">
+              - 다른 바이럴 회사들이{" "}
+              <span className="text-red-500">
+                &lsquo;블로그 상위노출 100%&rsquo;
+              </span>
+              라고 광고하는 경우가 많습니다. 하지만 이는 틀렸습니다.
+              서울대,카이스트 등 한국 최고의 대학 출신 석박사들이 개발한
+              프로그램을 뚫고 상위노출이 100% 가능할 거라고 생각하십니까?
+              블로그의 최상단 노출은 오로지 네이버의 로직 시스템에 의해
+              결정됩니다. 따라서 시스템의 기준을 충족시키는 것이 핵심입니다. 이
+              과정을 상세히 설명하고 질의응답 시간을 가집니다.
+              <br />
             </h5>
-            <span className='font-[600] text-[18px]'>2. 템플릿과 형식을 활용합니다</span>
-            <h5 className='mb-[10px] l:mb-[5px]'>
-                - 블로그 마케팅을 이용할 때의 문제점은 글을 무분별하게 작성하는 경우입니다. 글은 논리적으로 작성되어야 하며 <span className='text-blue-500'>본문과 연관된 키워드와 사진</span>을 첨부해야 네티즌들이 손쉽게 정보를 받아드립니다. 양식에서 고객님들이 변경하고 싶은 부분은 언제든지 수정이 가능하며, 결과적으로 깔끔하고 눈에 띄는 글을 작성할 수 있습니다.<br />
+            <span className="font-[600] text-[18px]">
+              2. 템플릿과 형식을 활용합니다
+            </span>
+            <h5 className="mb-[10px] l:mb-[5px]">
+              - 블로그 마케팅을 이용할 때의 문제점은 글을 무분별하게 작성하는
+              경우입니다. 글은 논리적으로 작성되어야 하며{" "}
+              <span className="text-blue-500">본문과 연관된 키워드와 사진</span>
+              을 첨부해야 네티즌들이 손쉽게 정보를 받아드립니다. 양식에서
+              고객님들이 변경하고 싶은 부분은 언제든지 수정이 가능하며,
+              결과적으로 깔끔하고 눈에 띄는 글을 작성할 수 있습니다.
+              <br />
             </h5>
-            <span className='font-[600] text-[18px]'>3. 노하우를 드립니다.</span>
+            <span className="font-[600] text-[18px]">
+              3. 노하우를 드립니다.
+            </span>
             <h5>
-                - 이후에는 외부 업체를 이용하지 않고 직접 블로그 마케팅을 수행할 수 있는 방법과 <span className='text-yellow-600'>몇 년 동안 축적된 유용한 팁과 노하우</span>를 제공합니다.
-                바이럴토스가 제공하는 블로그 서비스는 가장 초석이 되는 부분으로, 이제 막 창업하거나 블로그 마케팅을 해보신적이 없는 분들을 위한 서비스입니다. 뿐만 아니라 같이 작업을 진행할 블로거들은 수년간 쌓아온 신뢰가 있는 전문가이니 안심하고 맡기셔도 됩니다.
+              - 이후에는 외부 업체를 이용하지 않고 직접 블로그 마케팅을 수행할
+              수 있는 방법과{" "}
+              <span className="text-yellow-600">
+                몇 년 동안 축적된 유용한 팁과 노하우
+              </span>
+              를 제공합니다. 바이럴토스가 제공하는 블로그 서비스는 가장 초석이
+              되는 부분으로, 이제 막 창업하거나 블로그 마케팅을 해보신적이 없는
+              분들을 위한 서비스입니다. 뿐만 아니라 같이 작업을 진행할
+              블로거들은 수년간 쌓아온 신뢰가 있는 전문가이니 안심하고 맡기셔도
+              됩니다.
             </h5>
           </div>
         </div>
-        <div className='hidden w-[40%] relative l:flex items-center'>
+        <div className="hidden w-[40%] relative l:flex items-center">
           {/* <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/Group 12.png"}
@@ -75,17 +113,17 @@ const Outbox = ({isOpen,setOpen}: Outbox) => {
             style={imageStyle}
           />
         </div>
-      </div>  
+      </div>
     </div>
-  ) : null
-}
+  ) : null;
+};
 
-export default Outbox
+export default Outbox;
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
-]
+  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
+];
 
 // 1. 지속적인 포스팅
 // - 아무리 이웃과 조회수가 많더라도 지속적인 포스팅이 뒷받침되지 않으면 광고효과를 기대하기 어렵습니다.
@@ -93,15 +131,18 @@ const data = [
 // - 네이버는 포스팅된 블로그 안에 적혀 있는 단어들을 직접 연결해서 높은 점수를 주게 됩니다. 예를 들어 카페
 // 에 관련된 글을 올렸다면 아메리카노,라떼와 같은 단어들이 본문에 있어야만 점수를 얻고 상위 노출이 됩니다.
 
-{/* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
+{
+  /* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
 - 해시태그를 이용한 홍보
 - 간단하고 직관적인 이미지 노출
-- 프로필 링크를 통해 단순하게 상품을 구입*/}
+- 프로필 링크를 통해 단순하게 상품을 구입*/
+}
 
 // 블로그를 활용해 제품이나 서비스를 홍보하는 마케팅 기법입니다.
 // 장점으로는 소비자들간의 양방향 커뮤니케이션, 낮은비용 대비 고효과 등이 있습니다.
 
-{/* <h3>네이버 파워링크/스마트플레이스란?</h3>
+{
+  /* <h3>네이버 파워링크/스마트플레이스란?</h3>
           <p>
             파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
             일반적으로 음식점에서는 스마트플레이스를 기업의 경우 파워링크를 이용합니다.
@@ -162,4 +203,5 @@ const data = [
             오로지 정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는 없습니다.
 
             가장 염려하시는 부분은 "만약 바이럴"
-          </p> */}
+          </p> */
+}

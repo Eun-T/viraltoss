@@ -54,18 +54,17 @@ const cardVariants2 = {
   },
 };
 
+const imageStyle = {
+  objectFit: "cover",
+  objectPosition: "top",
+} as React.CSSProperties;
+
+const imageStyle1 = {
+  objectFit: "cover",
+  objectPosition: "center",
+} as React.CSSProperties;
+
 const Youtuber = (props: Props) => {
-
-  const imageStyle = {
-    objectFit: "cover",
-    objectPosition: "top",
-  } as React.CSSProperties;
-
-  const imageStyle1 = {
-    objectFit: "cover",
-    objectPosition: "center",
-  } as React.CSSProperties;
-
   return (
     <section className="w-full py-[100px] l:py-[125px]" id="service">
       <div className="w-[92%] max-w-[1140px] mx-auto">
@@ -115,12 +114,12 @@ const Youtuber = (props: Props) => {
                 src={"/images/cafe.jpg"}
                 alt="소규모 자영업자."
                 fill
+                sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"
                 style={imageStyle}
               />
             </div>
           </div>
         </motion.div>
-        {/* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; shadow-[8px_16px_16px_#616161]*/}
         {/* Designed by Freepik */}
         <motion.div
           initial="offscreen"
@@ -140,21 +139,14 @@ const Youtuber = (props: Props) => {
                   &middot; 구독자 수가 정체돼서 고민하시는 분<br />
                   &middot; 간단하고 이해하기 쉬운 컨설팅을 원하시는 분
                 </h4>
-                {/* <h5 className="text-[#6b7684]">
-                  &nbsp;&nbsp;(여행/디지털/게임 환영)
-                </h5> */}
               </div>
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-va opacity-[0.75] relative">
-              {/* <img
-                src="images/souvik-banerjee-8dOk8JVESxY-unsplash.jpg"
-                alt="sad"
-                className="w-full min-w-[400px]"
-              /> */}
               <Image
                 src={"/images/youtuber.jpg"}
                 alt="유튜버."
                 fill
+                sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"
                 style={imageStyle}
               />
             </div>
@@ -186,21 +178,14 @@ const Youtuber = (props: Props) => {
                   <br />
                   &nbsp;&nbsp;마케팅에 대해 논의하고 싶을 때
                 </h4>
-                {/* <h5 className="text-[#6b7684] text-center">
-                  &nbsp;&nbsp;(모니터/태블릿 같은 전자제품 환영)
-                </h5> */}
               </div>
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-va opacity-[0.75] relative">
-              {/* <img
-                src="images/domenico-loia-hGV2TfOh0ns-unsplash.jpg"
-                alt="sad"
-                className="w-full min-w-[400px]"
-              /> */}
               <Image
                 src={"/images/enterprise.jpg"}
                 alt="중소/중견기업."
                 fill
+                sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"
                 style={imageStyle1}
               />
             </div>

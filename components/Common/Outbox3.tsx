@@ -1,67 +1,100 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
 
 type Outbox = {
-  isOpen: boolean,
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
+  isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const imageStyle = {
+  objectFit: "contain",
+  objectPosition: "center",
+} as React.CSSProperties;
 
 // 3. 솔직하고 정직하게
-// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
+// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
 
-const Outbox3 = ({isOpen,setOpen}: Outbox) => {
-
-  const imageStyle = {
-    objectFit:'cover',
-    objectPosition:'center',
-  } as React.CSSProperties
-
+const Outbox3 = ({ isOpen, setOpen }: Outbox) => {
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
-      document.documentElement.style.overflowY = 'hidden';
+      document.documentElement.style.overflowY = "hidden";
     } else {
       // 스크롤을 다시 활성화
-      document.documentElement.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
     }
   }, [isOpen]);
-  
+
   return isOpen ? (
-    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
-      <div className='w-full h-full bg-black opacity-60 absolute' onClick={(e) => {
-        setOpen(false)
-      }}></div>
-      <div className='bg-white overflow-y-scroll h-[400px] s:h-[510px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
-      <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
-          setOpen(false)
-        }}>
-          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
+    <div className="fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center">
+      <div
+        className="w-full h-full bg-black opacity-60 absolute"
+        onClick={(e) => {
+          setOpen(false);
+        }}
+      ></div>
+      <div
+        className="bg-white overflow-y-scroll h-[400px] s:h-[510px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col"
+        id="outbox"
+      >
+        <div
+          className="absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer"
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <TfiClose className="text-[25px] s:text-[33px] l:text-[40px]" />
         </div>
-        <div className='l:max-w-[60%]'>
-          <div className='break-keep leading-[1.6]'>
-            <h4 className='text-[22px] font-[700]'>SNS 마케팅</h4>
-            <div className='w-full h-[1px] bg-black my-[7px]'></div>
-            <h5 className='mb-[7px]'>
-              스마트폰 출시 이후, SNS 마케팅은 더 이상 선택 사항이 아닌 필수가 되었습니다.
-              왜냐하면 SNS를 통한 마케팅은 브랜드 신뢰도와 인지도를 상승시키는데 효과적인 전략이기 때문입니다.
-              인스타그램,페이스북,트위터 등 많은 플랫폼을 통해 소비자들에게 친밀한 이미지를 제공할 수 있죠.
-              <span className='text-green-700'>&nbsp;그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?</span>
+        <div className="l:max-w-[60%]">
+          <div className="break-keep leading-[1.6]">
+            <h4 className="text-[22px] font-[700]">SNS 마케팅</h4>
+            <div className="w-full h-[1px] bg-black my-[7px]"></div>
+            <h5 className="mb-[7px]">
+              스마트폰 출시 이후, SNS 마케팅은 더 이상 선택 사항이 아닌 필수가
+              되었습니다. 왜냐하면 SNS를 통한 마케팅은 브랜드 신뢰도와 인지도를
+              상승시키는데 효과적인 전략이기 때문입니다.
+              인스타그램,페이스북,트위터 등 많은 플랫폼을 통해 소비자들에게
+              친밀한 이미지를 제공할 수 있죠.
+              <span className="text-green-700">
+                &nbsp;그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?
+              </span>
             </h5>
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 유명 인플루언서와 협업을 통한 마케팅</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 브랜드 채널 개설 및 운영</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 고객님의 SNS 계정 관리</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅</span><br />
-            <span className='font-[600] text-[18px] inline-block mb-[7px]'>- 인스타그램, 페이스북 등 SNS 자체 광고를 위한 사진 촬영 및 편집</span><br />
-            <h5 className=''>
-              등이 있습니다.<br />
-              저희는 단순히 외주를 주는 것이 아니라 소통과 협력을 통해 언제든지 수정이 가능합니다.
-              이 서비스는 <span className='text-blue-400'>블로그와 파워링크등 다른 마케팅 채널을 원하시는 분, 저렴한 비용으로 높은 효과를 원하시는 분</span>에게 추천드립니다.
-              다년간의 노하우와 전문적인 지식을 갖추고 있으니, 바이럴토스를 믿고 맡겨주세요.
+            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+              - 유명 인플루언서와 협업을 통한 마케팅
+            </span>
+            <br />
+            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+              - 브랜드 채널 개설 및 운영
+            </span>
+            <br />
+            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+              - 고객님의 SNS 계정 관리
+            </span>
+            <br />
+            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+              - 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅
+            </span>
+            <br />
+            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+              - 인스타그램, 페이스북 등 SNS 자체 광고를 위한 사진 촬영 및 편집
+            </span>
+            <br />
+            <h5 className="">
+              등이 있습니다.
+              <br />
+              저희는 단순히 외주를 주는 것이 아니라 소통과 협력을 통해 언제든지
+              수정이 가능합니다. 이 서비스는{" "}
+              <span className="text-blue-400">
+                블로그와 파워링크등 다른 마케팅 채널을 원하시는 분, 저렴한
+                비용으로 높은 효과를 원하시는 분
+              </span>
+              에게 추천드립니다. 다년간의 노하우와 전문적인 지식을 갖추고
+              있으니, 바이럴토스를 믿고 맡겨주세요.
             </h5>
           </div>
         </div>
-        <div className='hidden w-[40%] relative l:flex items-center'>
+        <div className="hidden w-[40%] relative l:flex items-center">
           {/* <img src="images/power_place.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/sns4.png"}
@@ -70,17 +103,17 @@ const Outbox3 = ({isOpen,setOpen}: Outbox) => {
             style={imageStyle}
           />
         </div>
-      </div>  
+      </div>
     </div>
-  ) : null
-}
+  ) : null;
+};
 
-export default Outbox3
+export default Outbox3;
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
-]
+  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
+];
 
 // 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
 
@@ -94,15 +127,18 @@ const data = [
 // - 네이버는 포스팅된 블로그 안에 적혀 있는 단어들을 직접 연결해서 높은 점수를 주게 됩니다. 예를 들어 카페
 // 에 관련된 글을 올렸다면 아메리카노,라떼와 같은 단어들이 본문에 있어야만 점수를 얻고 상위 노출이 됩니다.
 
-{/* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
+{
+  /* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
 - 해시태그를 이용한 홍보
 - 간단하고 직관적인 이미지 노출
-- 프로필 링크를 통해 단순하게 상품을 구입*/}
+- 프로필 링크를 통해 단순하게 상품을 구입*/
+}
 
 // 블로그를 활용해 제품이나 서비스를 홍보하는 마케팅 기법입니다.
 // 장점으로는 소비자들간의 양방향 커뮤니케이션, 낮은비용 대비 고효과 등이 있습니다.
 
-{/* <h3>네이버 파워링크/스마트플레이스란?</h3>
+{
+  /* <h3>네이버 파워링크/스마트플레이스란?</h3>
           <p>
             파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
             일반적으로 음식점에서는 스마트플레이스를 기업의 경우 파워링크를 이용합니다.
@@ -163,4 +199,5 @@ const data = [
             오로지 정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는 없습니다.
 
             가장 염려하시는 부분은 "만약 바이럴"
-          </p> */}
+          </p> */
+}

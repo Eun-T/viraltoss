@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Contact from "./Contact";
 
 type Props = {};
 
@@ -45,12 +44,8 @@ const Friend = (props: Props) => {
           </div>
         </div>
       </div>
-      {/* <Contact /> */}
     </section>
   );
 };
 
 export default Friend;
-
-//마케팅이 필요하신가요?
-//카페,블로그부터 컨설팅까지

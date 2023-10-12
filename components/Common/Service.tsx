@@ -7,9 +7,8 @@ import Outbox2 from "./Outbox2";
 import Outbox3 from "./Outbox3";
 import Outbox4 from "./Outbox4";
 import Outbox5 from "./Outbox5";
-import Plus from "./Plus";
-import { helvetica } from "@/app/layout";
 import Image from "next/image";
+import Plus from "./Plus";
 
 const cardVariants = {
   offscreen: {
@@ -27,6 +26,11 @@ const cardVariants = {
   },
 };
 
+const imageStyle = {
+  objectFit: "contain",
+  objectPosition: "center",
+} as React.CSSProperties;
+
 const Service = () => {
   const [outbox1, setOutbox1] = useState<boolean>(false);
   const [outbox2, setOutbox2] = useState<boolean>(false);
@@ -34,11 +38,6 @@ const Service = () => {
   const [outbox4, setOutbox4] = useState<boolean>(false);
   const [outbox5, setOutbox5] = useState<boolean>(false);
   const [plus, setPlus] = useState<boolean>(false);
-
-  const imageStyle = {
-    objectFit:'cover',
-    objectPosition:'center',
-  } as React.CSSProperties
 
   return (
     <section
@@ -65,9 +64,7 @@ const Service = () => {
             <h3 className="text-center text-[20px] s:text-[30px] font-[700] mb-[35px] s:mb-[50px]">
               자영업자를 위한 패키지
             </h3>
-            <div className="w-full bg--500 rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
-              {/* 0 0 0 0.05rem hsla(214,88%,27%,0.08), 0 0 1.25rem hsla(216, 14%, 14%, 0.06) */}
-
+            <div className="w-full rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -84,13 +81,16 @@ const Service = () => {
                     <Image
                       alt="블로그."
                       src={"/images/blog1.jpg"}
-                      // sizes="100vw"
+                      sizes="(max-width: 480px) 300px, 360px"
+                      priority
                       fill
                       style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">블로그</h4>
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">
+                      블로그
+                    </h4>
                     <p className="text-[14px] s:text-[16px]">
                       바이럴 영역에서 경쟁이 치열해지고 있는 블로그 마케팅은
                       광고효과를 기대하기 어려워지고 있습니다. 그러나 우리는
@@ -99,9 +99,7 @@ const Service = () => {
                       전달합니다. 이 과정을 통해 방문객들의 주목을 끄는 데
                       도움을 드립니다.
                     </p>
-                    {/* <p>바이럴토스는 모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.</p> */}
                   </div>
-                  {/* <Outbox /> */}
                 </div>
               </motion.div>
 
@@ -121,6 +119,8 @@ const Service = () => {
                     <Image
                       src={"/images/naver_power_link.png"}
                       alt="네이버 파워 링크,스마트플레이스."
+                      sizes="(max-width: 480px) 300px, 360px"
+                      priority
                       fill
                       style={imageStyle}
                     />
@@ -157,6 +157,7 @@ const Service = () => {
                     <Image
                       src={"/images/social_media.png"}
                       alt="SNS."
+                      sizes="(max-width: 480px) 300px, 360px"
                       fill
                       style={imageStyle}
                     />
@@ -189,7 +190,7 @@ const Service = () => {
         >
           <div className="">
             <h3 className="text-center text-[20px] s:text-[30px] font-[700] mb-[35px] s:mb-[50px]">
-              유튜버를 위한 통합 서비스
+              유튜버를 위한 패키지
             </h3>
 
             <div className="w-full bg--500 rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
@@ -210,6 +211,7 @@ const Service = () => {
                       src={"/images/youtuber123.png"}
                       alt="유튜브."
                       fill
+                      sizes="(max-width: 480px) 300px, 360px"
                       style={imageStyle}
                     />
                   </div>
@@ -218,11 +220,12 @@ const Service = () => {
                       유튜브 컨설팅
                     </h4>
                     <p className="text-[14px] s:text-[16px]">
-                      스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
-                      있습니다. 그러기 위해서는 최신 유튜브 알고리즘을 이해할
-                      필요는 없습니다. SEO, CTR, APV와 같은 용어보다는 성공적인
-                      채널 운영을 위한 트렌드와 비법을 공유합니다. 바이럴토스는
-                      모든 클라이언트에게 우리만의 '전략'을 제공해 드립니다.
+                      스포츠에도 전략이 있듯이 유튜브에도 &lsquo;성공하는
+                      전략&rsquo;이 있습니다. 그러기 위해서는 최신 유튜브
+                      알고리즘을 이해할 필요는 없습니다. SEO, CTR, APV와 같은
+                      용어보다는 성공적인 채널 운영을 위한 트렌드와 비법을
+                      공유합니다. 바이럴토스는 모든 클라이언트에게 우리만의
+                      &lsquo;전략&rsquo;을 제공해 드립니다.
                     </p>
                   </div>
                 </div>
@@ -244,11 +247,14 @@ const Service = () => {
                       src={"/images/popularity.png"}
                       alt="인기글."
                       fill
+                      sizes="(max-width: 480px) 300px, 360px"
                       style={imageStyle}
                     />
                   </div>
                   <div className="px-[15px] my-[15px] s:px-[20px] s:my-[20px]">
-                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">인기글</h4>
+                    <h4 className="font-[700] mb-[5px] text-[15px] s:text-[20px]">
+                      인기글
+                    </h4>
                     <p className="text-[14px] s:text-[16px]">
                       새로운 구독자를 확보하고 싶으신가요? 저희는 유튜브 영상을
                       캡처해서 흥미로운 짤을 만듭니다. 이 짤을 국내 다양한
@@ -256,11 +262,6 @@ const Service = () => {
                       화제성을 확보합니다. 이 방법을 통해 시청자들의 관심을
                       유도하고 귀하의 채널을 성공적으로 성장시킬 수 있을
                       것입니다.
-                      {/* 이를 통해 시청자들은 더 많은 관심과 참여를 기대할 수
-                      있습니다. 인기글 서비스는 시청자들의 관심을 끌어 참여를 기대할 수 있습니다.
-                      유튜브에서 더 많은 인기와
-                      시청자를 유도하며, 귀하의 채널을 성공적으로 성장시키는 데
-                      도움이 될 것입니다. */}
                     </p>
                   </div>
                 </div>
@@ -268,90 +269,6 @@ const Service = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* <div>
-          <motion.div
-            initial="offscreen"
-            whileInView="onscreen"
-            variants={cardVariants}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-center text-[30px] font-[700] mb-[50px]">
-              기업을 위한 통합 서비스
-            </h3>
-            <div className="w-full bg--500 rounded-[30px] flex gap-[30px] justify-center flex-wrap">
-              <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
-                <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
-                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
-                    Designed by stories / Freepik
-                  </h5>
-                  <Image
-                    src={"/images/blog2.png"}
-                    alt="블로그."
-                    fill
-                    objectFit="contain"
-                    objectPosition="center"
-                  />
-                </div>
-                <div className="px-[20px] my-[20px]">
-                  <h4 className="font-[700] mb-[5px] text-[20px]">블로그</h4>
-                  <p>
-                    스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
-                    있습니다. 바이럴토스는 모든 클라이언트에게 우리만의 '블로그
-                    전략'을 제공해 드립니다.
-                  </p>
-                </div>
-              </div>
-              <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
-                <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
-                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
-                    Designed by Freepik
-                  </h5>
-                  <Image
-                    src={"/images/youtube12.jpg"}
-                    alt="유튜브."
-                    fill
-                    objectFit="contain"
-                    objectPosition="center"
-                  />
-                </div>
-                <div className="px-[20px] my-[20px]">
-                  <h4 className="font-[700] mb-[5px] text-[20px]">유튜브</h4>
-                  <p>
-                    유튜브 영상을 캡쳐해서 하나의 스토리를 만들어 드립니다. 이를
-                    국내 다양한 온라인 커뮤니티에 게시하여 화제성을 확보하고
-                    인기글 게시판에 노출시킵니다.
-                  </p>
-                </div>
-              </div>
-              <div className="w-[360px] shadow-lg bg-white rounded-[30px] overflow-hidden flex flex-col cursor-pointer">
-                <div className="w-full h-[220px] relative">
-                  <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
-                  <h5 className="text-[10px] absolute right-0 [writing-mode:vertical-lr] top-[10%]">
-                    Designed by studiogstock / Freepik
-                  </h5>
-                  <Image
-                    src={"/images/community2.png"}
-                    alt="커뮤니티사이트."
-                    fill
-                    objectFit="contain"
-                    objectPosition="center"
-                  />
-                </div>
-                <div className="px-[20px] my-[20px]">
-                  <h4 className="font-[700] mb-[5px] text-[20px]">커뮤니티</h4>
-                  <p>
-                    스포츠에도 전략이 있듯이 유튜브에도 '성공하는 전략'이
-                    있습니다. 바이럴토스는 모든 클라이언트에게 우리만의 '전략'을
-                    제공해 드립니다.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div> */}
       </div>
     </section>
   );

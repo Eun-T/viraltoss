@@ -7,16 +7,14 @@ type Outbox = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+const imageStyle = {
+  objectFit: "contain",
+  objectPosition: "center",
+} as React.CSSProperties;
 // 3. 솔직하고 정직하게
 // - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
 
 const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
-
-  const imageStyle = {
-    objectFit:'cover',
-    objectPosition:'center',
-  } as React.CSSProperties
-
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
@@ -35,7 +33,10 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
           setOpen(false);
         }}
       ></div>
-      <div className="bg-white overflow-y-scroll h-[400px] s:h-[480px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col" id="outbox">
+      <div
+        className="bg-white overflow-y-scroll h-[400px] s:h-[480px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col"
+        id="outbox"
+      >
         <div
           className="absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer"
           onClick={() => {
@@ -58,11 +59,11 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
               같은 방법으로 작업을 진행합니다.
             </h5>
             <span className="font-[600] text-[18px]">
-              1. 고객님의 영상으로 네티즌들의 이목을 끌 수 있는 짤들을
-              만듭니다.
+              1. 고객님의 영상으로 네티즌들의 이목을 끌 수 있는 짤들을 만듭니다.
             </span>
             <h5 className="mb-[7px]">
-              - 일단 협의를 통해 커뮤니티에 올릴 유튜브 영상을 선택합니다. 그 이후에 영상을 한땀한땀 캡쳐하고 이어붙여 짤을 제작합니다.
+              - 일단 협의를 통해 커뮤니티에 올릴 유튜브 영상을 선택합니다. 그
+              이후에 영상을 한땀한땀 캡쳐하고 이어붙여 짤을 제작합니다.
             </h5>
             <span className="font-[600] text-[18px]">
               2. 이중에서 원하는 짤을 고객님이 직접 선택합니다.
@@ -77,9 +78,10 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
               숙련된 노하우로 인해 네티즌들의 부정적 여론이 형성되거나 신고
               누적으로 삭제될 가능성은 제로에 가깝습니다. 뿐만 아니라 오로지
               정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는
-              없습니다. 인기글 서비스를 이용하시면 커뮤니티에서 고객님의 영상을 감상하고
-              구독자로 유입될 가능성이 상당히 높아집니다. 단 한번이라도 인기글에 게시가 되면
-              다른 광고와 비교해도 수십배 높은 효과를 얻을 수 있습니다.
+              없습니다. 인기글 서비스를 이용하시면 커뮤니티에서 고객님의 영상을
+              감상하고 구독자로 유입될 가능성이 상당히 높아집니다. 단 한번이라도
+              인기글에 게시가 되면 다른 광고와 비교해도 수십배 높은 효과를 얻을
+              수 있습니다.
             </h5>
           </div>
         </div>

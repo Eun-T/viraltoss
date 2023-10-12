@@ -1,78 +1,103 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
 
 type Outbox = {
-  isOpen: boolean,
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
+  isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
+const imageStyle = {
+  objectFit: "contain",
+  objectPosition: "center",
+} as React.CSSProperties;
 // 3. 솔직하고 정직하게
-// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어 
+// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
 
-const Outbox4 = ({isOpen,setOpen}: Outbox) => {
-
-  const imageStyle = {
-    objectFit:'cover',
-    objectPosition:'center',
-  } as React.CSSProperties
-  
+const Outbox4 = ({ isOpen, setOpen }: Outbox) => {
   useEffect(() => {
     if (isOpen) {
       // 스크롤을 막음
-      document.documentElement.style.overflowY = 'hidden';
+      document.documentElement.style.overflowY = "hidden";
     } else {
       // 스크롤을 다시 활성화
-      document.documentElement.style.overflowY = 'auto';
+      document.documentElement.style.overflowY = "auto";
     }
   }, [isOpen]);
 
   return isOpen ? (
-    <div className='fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center'>
-      <div className='w-full h-full bg-black opacity-50 absolute' onClick={(e) => {
-        setOpen(false)
-      }}></div>
-      <div className='bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col' id='outbox'>
-      <div className='absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer' onClick={() => {
-          setOpen(false)
-        }}>
-          <TfiClose className='text-[25px] s:text-[33px] l:text-[40px]'/>
+    <div className="fixed px-[20px] s:px-[30px] w-full h-full top-0 left-0 z-[100] flex justify-center items-center">
+      <div
+        className="w-full h-full bg-black opacity-50 absolute"
+        onClick={(e) => {
+          setOpen(false);
+        }}
+      ></div>
+      <div
+        className="bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col"
+        id="outbox"
+      >
+        <div
+          className="absolute top-[34px] s:top-[25px] z-[300] right-[30px] cursor-pointer"
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          <TfiClose className="text-[25px] s:text-[33px] l:text-[40px]" />
         </div>
-        <div className='l:max-w-[60%]'>
-          <div className='break-keep'>
-            <h4 className='text-[22px] font-[700]'>유튜브 컨설팅</h4>
-            <div className='w-full h-[1px] bg-black my-[7px]'></div>
-              <h5 className='mb-[10px] l:mb-[7px]'>
-                수백만원 짜리 컨설팅 강의를 듣고 계신가요?
-                유료 VOD 및 전자책을 읽고 계신가요?<br />
-                조회수와 구독자가 증가하지 않아 걱정하시거나 채널 운영에 어려움을 겪고 있다면,
-                이는 잘못된 방향으로 가고 있다는 증거입니다.
-                그러나 상황을 객관적으로 평가하는 것은 간단한 일이 아닙니다.
-                우리는 이러한 분들을 위해 맞춤형 컨설팅으로 새로운 활기를 불어넣습니다.<br />
-                그 방법은 다음과 같습니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>1. 객관적인 자료로 문제 해설</span>
-              <h5 className='mb-[10px] l:mb-[7px]'>
-                - 어려운 용어를 피하고 차트와 데이터를 사용하여 기술적 분석을 실시합니다.
-                <span className='text-red-500'>'왜 구독자 수가 정체되었는지'
-                '조회수가 낮은 이유가 무엇인지' 등</span>을 제3자의 시각으로 바라보고 크리에이터에게 필요한 부분을 설명드립니다.
-                물론 고객님께서 기분이 나쁠 수도 있고 자존심이 상할 수도 있지만, 성공하기 위해서는 누군가의 따끔한 말 한마디가 필요할때가 있습니다.
-                결코 쉬운일은 아니지만 사람들이 맞춤 컨설팅을 찾는 이유랍니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>2. 새로운 수익 구조</span>
-              <h5 className='mb-[10px] l:mb-[7px]'>
-                - 고객님의 채널을 면밀히 분석하여 광고 수익 외에도 <span className='text-blue-400'>새로운 비즈니스 모델</span>을 찾아냅니다.
-                경제적인 안정감을 위해서는 다양한 수익 경로가 필요합니다.
-              </h5>
-              <span className='font-[600] text-[18px]'>3. 채널의 방향성을 잡아드립니다</span>
-              <h5 className=''>
-                - 컨설팅의 핵심은 고객님에게 자신감을 불어넣어 도전할 수 있도록 하는 것입니다.
-                따라서 유튜브의 <span className='text-green-700'>방향성을 위해서 채널 목적에 맞는 어떤 컨셉을 잡고 나아가야하는지를 함께 의논하고 소통</span>하는 시간을 가지게 됩니다.
-                구독자 니즈를 충족시킬 다양한 아이템을 가지고 있으니 언제든지 믿고 맡겨주시면 감사합니다.
-              </h5>
+        <div className="l:max-w-[60%]">
+          <div className="break-keep">
+            <h4 className="text-[22px] font-[700]">유튜브 컨설팅</h4>
+            <div className="w-full h-[1px] bg-black my-[7px]"></div>
+            <h5 className="mb-[10px] l:mb-[7px]">
+              수백만원 짜리 컨설팅 강의를 듣고 계신가요? 유료 VOD 및 전자책을
+              읽고 계신가요?
+              <br />
+              조회수와 구독자가 증가하지 않아 걱정하시거나 채널 운영에 어려움을
+              겪고 있다면, 이는 잘못된 방향으로 가고 있다는 증거입니다. 그러나
+              상황을 객관적으로 평가하는 것은 간단한 일이 아닙니다. 우리는
+              이러한 분들을 위해 맞춤형 컨설팅으로 새로운 활기를 불어넣습니다.
+              <br />그 방법은 다음과 같습니다.
+            </h5>
+            <span className="font-[600] text-[18px]">
+              1. 객관적인 자료로 문제 해설
+            </span>
+            <h5 className="mb-[10px] l:mb-[7px]">
+              - 어려운 용어를 피하고 차트와 데이터를 사용하여 기술적 분석을
+              실시합니다.
+              <span className="text-red-500">
+                &lsquo;왜 구독자 수가 정체되었는지&rsquo; &lsquo;조회수가 낮은
+                이유가 무엇인지&rsquo; 등
+              </span>
+              을 제3자의 시각으로 바라보고 크리에이터에게 필요한 부분을
+              설명드립니다. 물론 고객님께서 기분이 나쁠 수도 있고 자존심이 상할
+              수도 있지만, 성공하기 위해서는 누군가의 따끔한 말 한마디가
+              필요할때가 있습니다. 결코 쉬운일은 아니지만 사람들이 맞춤 컨설팅을
+              찾는 이유랍니다.
+            </h5>
+            <span className="font-[600] text-[18px]">2. 새로운 수익 구조</span>
+            <h5 className="mb-[10px] l:mb-[7px]">
+              - 고객님의 채널을 면밀히 분석하여 광고 수익 외에도{" "}
+              <span className="text-blue-400">새로운 비즈니스 모델</span>을
+              찾아냅니다. 경제적인 안정감을 위해서는 다양한 수익 경로가
+              필요합니다.
+            </h5>
+            <span className="font-[600] text-[18px]">
+              3. 채널의 방향성을 잡아드립니다
+            </span>
+            <h5 className="">
+              - 컨설팅의 핵심은 고객님에게 자신감을 불어넣어 도전할 수 있도록
+              하는 것입니다. 따라서 유튜브의{" "}
+              <span className="text-green-700">
+                방향성을 위해서 채널 목적에 맞는 어떤 컨셉을 잡고
+                나아가야하는지를 함께 의논하고 소통
+              </span>
+              하는 시간을 가지게 됩니다. 구독자 니즈를 충족시킬 다양한 아이템을
+              가지고 있으니 언제든지 믿고 맡겨주시면 감사합니다.
+            </h5>
           </div>
         </div>
-        <div className='hidden w-[40%] relative l:flex items-center'>
+        <div className="hidden w-[40%] relative l:flex items-center">
           {/* <img src="images/youtube_consulting.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
           <Image
             src={"/images/youtube_consulting.png"}
@@ -81,17 +106,17 @@ const Outbox4 = ({isOpen,setOpen}: Outbox) => {
             style={imageStyle}
           />
         </div>
-      </div>  
+      </div>
     </div>
-  ) : null
-}
+  ) : null;
+};
 
-export default Outbox4
+export default Outbox4;
 
 const data = [
   "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로"
-]
+  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
+];
 
 //ctr,컨설팅,알고리즘,수익구조
 // 이런 문제들을 해결하기 위해서는 수년간의 축척된 노하우가 필요하기 마련입니다. - 만약 예산이 한정되어있다면, 가성비 좋은 키워드를 적어야합니다. cpc,입찰가
@@ -106,15 +131,18 @@ const data = [
 // - 네이버는 포스팅된 블로그 안에 적혀 있는 단어들을 직접 연결해서 높은 점수를 주게 됩니다. 예를 들어 카페
 // 에 관련된 글을 올렸다면 아메리카노,라떼와 같은 단어들이 본문에 있어야만 점수를 얻고 상위 노출이 됩니다.
 
-{/* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
+{
+  /* sns는 어떻게 해서 마케팅 플랫폼으로 역할을 가질수 있을까요? 
 - 해시태그를 이용한 홍보
 - 간단하고 직관적인 이미지 노출
-- 프로필 링크를 통해 단순하게 상품을 구입*/}
+- 프로필 링크를 통해 단순하게 상품을 구입*/
+}
 
 // 블로그를 활용해 제품이나 서비스를 홍보하는 마케팅 기법입니다.
 // 장점으로는 소비자들간의 양방향 커뮤니케이션, 낮은비용 대비 고효과 등이 있습니다.
 
-{/* <h3>네이버 파워링크/스마트플레이스란?</h3>
+{
+  /* <h3>네이버 파워링크/스마트플레이스란?</h3>
           <p>
             파워링크는 네이버 상단에 노출되는 광고상품이며 스마트플레이스는 업체를 홍보할 수 있는 서비스입니다.
             일반적으로 음식점에서는 스마트플레이스를 기업의 경우 파워링크를 이용합니다.
@@ -175,4 +203,5 @@ const data = [
             오로지 정상적이고 합법적인 방법으로 작업하기 때문에 걱정하실 필요는 없습니다.
 
             가장 염려하시는 부분은 "만약 바이럴"
-          </p> */}
+          </p> */
+}

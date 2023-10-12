@@ -15,7 +15,6 @@ const Footer = (props: Props) => {
             <li>이메일주소 : viraltoss@naver.com</li>
             <li>카톡아이디 : 바이럴토스</li>
           </ul>
-          {/* <img src="/images/logo4.svg" alt="" className="w-[100px]" /> */}
           <Image src={"/images/바이럴토스 (3).svg"} alt="바이럴토스_로고" width={100} height={100}/>
         </div>
       </div>

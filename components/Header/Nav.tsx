@@ -58,19 +58,12 @@ const Nav = () => {
                     : "/images/바이럴토스 (3).svg"
                 }
                 width={100}
-                height={100}
+                height={0}
+                style={{ width: "100px", height: "auto" }}
                 alt={"바이럴토스"}
+                priority
               />
             </a>
-            {/* <img
-              src={
-                scrolled
-                  ? "/images/바이럴토스 (4).svg"
-                  : "/images/바이럴토스 (3).svg"
-              }
-              alt=""
-              className="w-[100px]"
-            /> */}
           </div>
 
           {/* 진짜 navbar */}
@@ -116,7 +109,7 @@ const Nav = () => {
                     href="#question"
                     className={
                       (scrolled ? "text-[#3b3f4b]" : "text-white") +
-                      " font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:text-[#3182F6] bg-transparent  text-center"
+                      " font-[700] text-[18px] px-[10px] py-[12px] leading-[20px] block border-0 cursor-pointer no-underline hover:text-[#3182F6] bg-transparent text-center"
                     }
                   >
                     문의하기
@@ -206,15 +199,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-{
-  /* <div>
-<GiHamburgerMenu size="30" color="white"/>
-</div> */
-}
-// linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0))
-//           bg-gradient-to-r from-slate-900 to-slate-700
-//           bg-gradient-to-r from-gray-700 via-gray-900 to-black
-//           bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
-//           bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900
-//(scrolled ? "border-b-[rgba(0,27,55,0.1)] border-b-[1px]" : "")

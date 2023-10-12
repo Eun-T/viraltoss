@@ -8,47 +8,30 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-
-
 #outbox::-webkit-scrollbar {
   background-color: transparent;
   color: transparent;
-  /* display: none; */
-  /* width: 0; */
 }
 
 #outbox::-webkit-scrollbar-thumb  {
   background-color: transparent;
   color: transparent;
   display: none;
-  /* width: 0; */
 }
 
 ::-webkit-scrollbar {
   width: 10px; /* 스크롤바의 너비 */
 }
 
-::-webkit-scrollbar-track {
-  /* background-color: #e3e3e3; */
-  /* #e3e3e3 */
-}
+
 /* re_Z27wJwGp_F496LWtL9VM9RBaSj2Xg5RDi */
 
 ::-webkit-scrollbar-thumb {
-  /* 73,79,86,1 */
   background-color: #3182F6;
   border-radius: 8px;
 }
@@ -57,5 +40,3 @@ html {
   color: white;
   background-color: #3182F6
 }
-
-/* rgb(102, 102, 102); */
