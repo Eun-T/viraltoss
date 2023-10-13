@@ -193,7 +193,7 @@ const Service = () => {
               유튜버를 위한 패키지
             </h3>
 
-            <div className="w-full bg--500 rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
+            <div className="w-full rounded-[30px] flex gap-[50px] m:gap-[30px] justify-center flex-wrap">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}

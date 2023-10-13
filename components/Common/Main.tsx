@@ -12,17 +12,7 @@ const Main = (props: Props) => {
   const isArrowDown = () => {
     window.scrollTo({ top: 780, behavior: "smooth" });
   };
-
-  // useEffect(() => {
-  //   const CT = new ChannelTalk();
-  //   //주의! 여기서 CT.loadScript()를 선언하면 ChannelIO script included twice. 오류 발생합니다!
-  //   CT.boot({ pluginKey: "플러그인 Key" });
-
-  // 	//for unmount
-  //   return () => {
-  //     CT.shutdown();
-  //   };
-  // }, []);
+  //채널톡 부분
 
   return (
     <section className="w-full relative" id="home">

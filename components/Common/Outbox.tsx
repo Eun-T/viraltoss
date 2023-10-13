@@ -105,7 +105,7 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
           </div>
         </div>
         <div className="hidden w-[40%] relative l:flex items-center">
-          {/* <img src="images/blog_top.png" alt="blog_top" className='w-full h-full object-contain object-center'/> */}
+
           <Image
             src={"/images/Group 12.png"}
             alt="인기글."

@@ -39,7 +39,7 @@ const Nav = () => {
       <nav
         className={
           (scrolled ? "bg-[#f4f4f4] " : "bg-transparent") +
-          " w-full fixed top-0 left-0 ease-in-out transition duration-75 z-[50] shadow-navbarr"
+          " w-full fixed top-0 left-0 ease-in-out transition duration-75 z-[50] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.1),_0px_4px_6px_0px_rgba(54,79,199,0.08)]"
         }
       >
         <div className="w-[92%] max-w-[1140px] h-[72px] mx-auto flex items-center justify-between">

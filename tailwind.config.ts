@@ -13,14 +13,7 @@ const config: Config = {
       'l': '1024px', 
       },
     extend: {
-      backgroundImage: {
-        
-      },
-      boxShadow: {
-        'navbarr': '0px 2px 8px 0px rgba(0, 0, 0, 0.1), 0px 4px 6px 0px rgba(54, 79, 199, 0.08)',
-        'vx': '0px 14px 28px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.22)',
-        'va': 'rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;'
-      },
+
       keyframes: {
         textShow: {
           '0%': { backgroundColor: "transparent" },
