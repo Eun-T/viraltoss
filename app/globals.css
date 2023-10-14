@@ -16,6 +16,12 @@ html {
   height: var(--vh);
 }
 
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
 body {
   height: 100vh;
   height: var(--vh);

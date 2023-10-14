@@ -27,7 +27,7 @@ const Main = (props: Props) => {
 
   return (
     <section className="w-full relative" id="home">
-      <div className="relative  w-full">
+      <div className="relative v-[100vh] w-full">
         {/* Image by Racool_studio*/}
         <div className="w-full h-[100vh]">
           <div className="relative w-full h-full">
