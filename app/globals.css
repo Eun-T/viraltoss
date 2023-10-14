@@ -13,12 +13,18 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+
 #outbox::-webkit-scrollbar {
   background-color: transparent;
   color: transparent;
 }
 
-#outbox::-webkit-scrollbar-thumb  {
+#outbox::-webkit-scrollbar-thumb {
   background-color: transparent;
   color: transparent;
   display: none;
@@ -28,15 +34,14 @@ html {
   width: 10px; /* 스크롤바의 너비 */
 }
 
-
 /* re_Z27wJwGp_F496LWtL9VM9RBaSj2Xg5RDi */
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3182F6;
+  background-color: #3182f6;
   border-radius: 8px;
 }
 
 ::selection {
   color: white;
-  background-color: #3182F6
+  background-color: #3182f6;
 }
