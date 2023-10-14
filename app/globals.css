@@ -6,25 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --vh: 100%;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  height: 100vh;
-  height: var(--vh);
-}
-
-@supports (-webkit-touch-callout: none) {
-  .h-screen {
-    height: -webkit-fill-available;
-  }
-}
-
-body {
-  height: 100vh;
-  height: var(--vh);
 }
 
 #outbox::-webkit-scrollbar {
