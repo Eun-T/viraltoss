@@ -171,7 +171,7 @@ const Youtuber = (props: Props) => {
               <div className="text-start">
                 <h4 className="text-[#6b7684] font-[500] text-[16px] m:text-[20px] w-[100%] s:w-[82%] s:ml-[80px] m:mx-auto l:ml-auto text-start break-keep">
                   &middot; 자사 제품의 홍보를 원하시는 분<br />
-                  &middot; 종합적인 온라인 홍보를 위해 유튜브,블로그 등을
+                  &middot; 종합적인 온라인 홍보를 위해 유튜브, 블로그 등을
                   <br />
                   &nbsp;&nbsp;활용할 때<br />
                   &middot; 신뢰성 높은 바이럴전문가와 직접 대면해서

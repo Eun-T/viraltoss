@@ -24,6 +24,7 @@ const Main = (props: Props) => {
               autoPlay
               muted
               loop
+              playsInline
               className="relative w-full h-full object-cover brightness-[.7]"
             >
               <source src={"/movies/배경화면.mp4"} />

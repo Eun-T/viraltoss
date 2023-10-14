@@ -85,8 +85,8 @@ const Outbox2 = ({ isOpen, setOpen }: Outbox) => {
               기능들이 정말 많습니다. 부적절한 설정은 각 기능들이 따로 놀게 되고
               광고의 효율성이 타업체에 비해 떨어져서 매출 하락으로 이어지죠.
               <span className="text-red-500">
-                &nbsp;예를 들어 &lsquo;여성의류&rsquo;키워드 대신
-                &lsquo;여성데일리룩코디&rsquo;와 같은 검색 가능성이 낮은
+                &nbsp;예를 들어 &lsquo;여성의류&rsquo;&nbsp;키워드 대신
+                &lsquo;여성데일리룩코디&rsquo;&nbsp;와 같은 검색 가능성이 낮은
                 키워드를 설정하면 손해만 보게 됩니다.
               </span>
               &nbsp; 바이럴토스는 최소한의 비용으로 최대한의 효과를 얻을 수 있는
