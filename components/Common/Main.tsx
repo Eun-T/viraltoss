@@ -1,18 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { helvetica, jalnan } from "@/app/layout";
 
 type Props = {};
 
 const Main = (props: Props) => {
-  const [arrowDown, setArrowDown] = useState<boolean>(false);
+  let vh = 0;
+
+  useEffect(() => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
 
   const isArrowDown = () => {
     window.scrollTo({ top: 780, behavior: "smooth" });
   };
-  //채널톡 부분
 
   return (
     <section className="w-full relative" id="home">
