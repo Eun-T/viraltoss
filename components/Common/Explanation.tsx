@@ -49,7 +49,7 @@ const Explanation = (props: Props) => {
             viewport={{ once: true }}
           >
             <h2 className="text-[30px] s:text-[40px] m:text-[50px] font-[700] mb-[40px] s:mb-[60px] break-keep">
-              &apos;바이럴토스&apos;를 선택해야 하는 이유
+              &quot;바이럴토스&quot;를 선택해야 하는 이유
             </h2>
           </motion.div>
           <div className="w-fit text-start mx-auto">

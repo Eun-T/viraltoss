@@ -16,7 +16,7 @@ const Main = (props: Props) => {
 
   return (
     <section className="w-full relative" id="home">
-      <div className="relative h-[100vh] w-full">
+      <div className="relative  w-full">
         {/* Image by Racool_studio*/}
         <div className="w-full h-[100vh]">
           <div className="relative w-full h-full">
@@ -27,6 +27,7 @@ const Main = (props: Props) => {
               className="relative w-full h-full object-cover brightness-[.7]"
             >
               <source src={"/movies/배경화면.mp4"} />
+              배경화면 비디오
             </video>
           </div>
         </div>
