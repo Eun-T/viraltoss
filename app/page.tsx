@@ -9,42 +9,49 @@ import Nav from "@/components/Header/Nav";
 import { Metadata } from "next";
 import Head from "next/head";
 
-export const metadata = {
+
+
+export const metadata: Metadata = {
   title: "바이럴토스",
-  description: "바이럴마케팅을 원하시나요? 카페,블로그,브랜드마케팅 그리고 컨설팅까지! 소규모 정예로 이루어진 전문가에게 맡기세요. 언제든지 연락만 주시면 바이럴토스는 고객님을 직접 찾아갑니다.",
-  icons: {
-    icon: "/favicon/favi32.png",
-  },
+  description:
+    "바이럴마케팅을 원하시나요? 카페,블로그,브랜드마케팅 그리고 컨설팅까지! 소규모 정예로 이루어진 전문가에게 맡기세요. 언제든지 연락만 주시면 바이럴토스는 고객님을 직접 찾아갑니다.",
   openGraph: {
-    title: '바이럴토스',
-    description: '카페,블로그,브랜드마케팅,컨설팅의 바이럴마케팅 전문가. 소규모 정예로 이루어진 전문가에게 맡기세요',
-    url: 'https://viraltoss.com',
-    siteName: '바이럴토스',
+    title: "바이럴토스",
+    description:
+      "카페,블로그,브랜드마케팅,컨설팅의 바이럴마케팅 전문가. 소규모 정예로 이루어진 전문가에게 맡기세요",
+    url: "https://viraltoss.com",
+    siteName: "바이럴토스",
     images: [
       {
-        url: 'https://viraltoss.com/images/ogimage.png',
+        url: "https://viraltoss.com/images/ogimage.png",
         width: 800,
         height: 400,
-      }
+      },
     ],
-    locale: 'ko_KR',
-    type: 'website',
+    locale: "ko_KR",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: '바이럴토스',
-    description: '카페,블로그,브랜드마케팅,컨설팅의 바이럴마케팅 전문가. 소규모 정예로 이루어진 전문가에게 맡기세요',
+    card: "summary_large_image",
+    title: "바이럴토스",
+    description:
+      "카페,블로그,브랜드마케팅,컨설팅의 바이럴마케팅 전문가. 소규모 정예로 이루어진 전문가에게 맡기세요",
     images: [
       {
-        url: 'https://viraltoss.com/public/images/ogimage.png',
+        url: "https://viraltoss.com/public/images/ogimage.png",
         width: 1200,
         height: 630,
-        alt: '바이럴토스',
+        alt: "바이럴토스",
       },
-    ]
+    ],
   },
-  themeColor: '#3182F6',
-  applicationName: '바이럴토스',
+  themeColor: "#3182F6",
+  applicationName: "바이럴토스",
+  appleWebApp: {
+    statusBarStyle: "black-translucent",
+  },
+  category: "marketing",
+  metadataBase: new URL("https://viraltoss.com"),
   icons: {
     icon: [
       { url: '/favicon/favi32.png', sizes: '32x32', type: 'image/png' },
@@ -53,16 +60,10 @@ export const metadata = {
     apple: [
       { url: '/favicon/apple-touch.png', sizes: '180x180', type: 'image/png' },
     ],
-  },
-  appleWebApp: {
-    statusBarStyle: 'black-translucent',
-  },
-  category: 'marketing',
-  metadataBase: new URL('https://viraltoss.com'),
-};
+  }
+}
 
 export default function Home() {
-  
   return (
     <div>
       <Header />
