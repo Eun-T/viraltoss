@@ -61,7 +61,7 @@ const Nav = () => {
                 height={0}
                 style={{ width: "100px", height: "auto" }}
                 alt={"바이럴토스"}
-                priority
+                // priority
               />
             </a>
           </div>

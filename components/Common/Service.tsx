@@ -82,7 +82,7 @@ const Service = () => {
                       alt="블로그."
                       src={"/images/blog1.jpg"}
                       sizes="(max-width: 480px) 300px, 360px"
-                      priority
+                      // priority
                       fill
                       style={imageStyle}
                     />
@@ -120,7 +120,7 @@ const Service = () => {
                       src={"/images/naver_power_link.png"}
                       alt="네이버 파워 링크,스마트플레이스."
                       sizes="(max-width: 480px) 300px, 360px"
-                      priority
+                      // priority
                       fill
                       style={imageStyle}
                     />
