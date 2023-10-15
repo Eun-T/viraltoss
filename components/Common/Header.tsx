@@ -1,16 +1,8 @@
 import React from "react";
 import Head from "next/head";
-// import { Metadata } from "next";
 
 type Props = {};
 
-// export const metadata: Metadata = {
-//   title: "바이럴토스",
-//   description: "바이럴마케팅을 원하시나요? 카페,블로그,브랜드마케팅 그리고 컨설팅까지! 소규모 정예로 이루어진 전문가에게 맡기세요. 언제든지 연락만 주시면 바이럴토스는 고객님을 직접 찾아갑니다.",
-//   icons: {
-//     icon: "/favicon/favi32.png",
-//   },
-// };
 
 const Header = (props: Props) => {
   return (
