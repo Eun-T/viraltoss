@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
+import power from '../../public/images/power_place.png';
 
 type Outbox = {
   isOpen: boolean;
@@ -101,8 +102,8 @@ const Outbox2 = ({ isOpen, setOpen }: Outbox) => {
         </div>
         <div className="hidden w-[40%] relative l:flex items-center">
           <Image
-            src={"/images/power_place.png"}
-            alt="인기글."
+            src={power}
+            alt="네이버파워플레이스."
             fill
             style={imageStyle}
           />

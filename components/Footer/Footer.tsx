@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import v3 from '../../public/images/바이럴토스 (3).svg';
 
 type Props = {};
 
@@ -15,7 +16,7 @@ const Footer = (props: Props) => {
             <li>이메일주소 : viraltoss@naver.com</li>
             <li>카톡아이디 : 바이럴토스</li>
           </ul>
-          <Image src={"/images/바이럴토스 (3).svg"} alt="바이럴토스_로고" width={100} height={100}/>
+          <Image src={v3} alt="바이럴토스_로고" width={100} height={100}/>
         </div>
       </div>
     </footer>

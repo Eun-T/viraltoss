@@ -9,6 +9,11 @@ import Outbox4 from "./Outbox4";
 import Outbox5 from "./Outbox5";
 import Image from "next/image";
 import Plus from "./Plus";
+import blog1 from '../../public/images/blog1.jpg';
+import naver from '../../public/images/naver_power_link.png';
+import socialMedia from '../../public/images/social_media.png';
+import youtuber from '../../public/images/youtuber123.png';
+import popularity from '../../public/images/popularity.png';
 
 const cardVariants = {
   offscreen: {
@@ -80,7 +85,7 @@ const Service = () => {
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
                       alt="블로그."
-                      src={"/images/blog1.jpg"}
+                      src={blog1}
                       sizes="(max-width: 480px) 300px, 360px"
                       // priority
                       fill
@@ -117,7 +122,7 @@ const Service = () => {
                   <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
-                      src={"/images/naver_power_link.png"}
+                      src={naver}
                       alt="네이버 파워 링크,스마트플레이스."
                       sizes="(max-width: 480px) 300px, 360px"
                       // priority
@@ -155,7 +160,7 @@ const Service = () => {
                   <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
-                      src={"/images/social_media.png"}
+                      src={socialMedia}
                       alt="SNS."
                       sizes="(max-width: 480px) 300px, 360px"
                       fill
@@ -208,7 +213,7 @@ const Service = () => {
                   <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
-                      src={"/images/youtuber123.png"}
+                      src={youtuber}
                       alt="유튜브."
                       fill
                       sizes="(max-width: 480px) 300px, 360px"
@@ -244,7 +249,7 @@ const Service = () => {
                   <div className="w-full h-[160px] s:h-[220px] relative overflow-hidden">
                     <div className="w-full h-full opacity-25 absolute bg-black pointer-events-none z-10"></div>
                     <Image
-                      src={"/images/popularity.png"}
+                      src={popularity}
                       alt="인기글."
                       fill
                       sizes="(max-width: 480px) 300px, 360px"

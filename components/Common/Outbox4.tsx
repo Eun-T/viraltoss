@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
+import youtuber from '../../public/images/youtube_consulting.png';
 
 type Outbox = {
   isOpen: boolean;
@@ -100,8 +101,8 @@ const Outbox4 = ({ isOpen, setOpen }: Outbox) => {
         <div className="hidden w-[40%] relative l:flex items-center">
 
           <Image
-            src={"/images/youtube_consulting.png"}
-            alt="인기글."
+            src={youtuber}
+            alt="유튜버."
             fill
             style={imageStyle}
           />
