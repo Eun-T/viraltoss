@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
+import blog from '../../public/images/blog_marketing.png'
 
 type Outbox = {
   isOpen: boolean;
@@ -107,8 +108,8 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
         <div className="hidden w-[40%] relative l:flex items-center">
 
           <Image
-            src={"/images/Group 12.png"}
-            alt="인기글."
+            src={blog}
+            alt="블로그마케팅."
             fill
             style={imageStyle}
           />

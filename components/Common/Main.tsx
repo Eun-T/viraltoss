@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
-import { helvetica, jalnan } from "@/app/layout";
+import { jalnan } from "@/app/layout";
 
 type Props = {};
 

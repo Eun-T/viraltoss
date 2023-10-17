@@ -3,6 +3,9 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import cafe from '../../public/images/cafe.jpg'
+import youtuber1 from '../../public/images/youtuber.jpg'
+import enterprise from '../../public/images/enterprise.jpg'
 
 type Props = {};
 
@@ -111,7 +114,7 @@ const Youtuber = (props: Props) => {
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-[0px_2px_4px_0px_rgba(14,30,37,0.12),_0_2px_16px_0_rgba(14,30,37,0.32)] opacity-[0.75] relative">
               <Image
-                src={"/images/cafe.jpg"}
+                src={cafe}
                 alt="소규모 자영업자."
                 fill
                 sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"
@@ -143,7 +146,7 @@ const Youtuber = (props: Props) => {
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-[0px_2px_4px_0px_rgba(14,30,37,0.12),_0_2px_16px_0_rgba(14,30,37,0.32)] opacity-[0.75] relative">
               <Image
-                src={"/images/youtuber.jpg"}
+                src={youtuber1}
                 alt="유튜버."
                 fill
                 sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"
@@ -182,7 +185,7 @@ const Youtuber = (props: Props) => {
             </div>
             <div className="w-[300px] h-[250px] s:w-[400px] s:h-[300px] m:w-[500px] m:h-[333px] rounded-[30px] overflow-hidden shadow-[0px_2px_4px_0px_rgba(14,30,37,0.12),_0_2px_16px_0_rgba(14,30,37,0.32)] opacity-[0.75] relative">
               <Image
-                src={"/images/enterprise.jpg"}
+                src={enterprise}
                 alt="중소/중견기업."
                 fill
                 sizes="(min-width: 480px) 400px, (min-width: 768px) 500px, 300px"

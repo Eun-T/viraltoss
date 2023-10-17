@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
+import sns from '../../public/images/sns4.png'
 
 type Outbox = {
   isOpen: boolean;
@@ -97,8 +98,8 @@ const Outbox3 = ({ isOpen, setOpen }: Outbox) => {
         <div className="hidden w-[40%] relative l:flex items-center">
 
           <Image
-            src={"/images/sns4.png"}
-            alt="인기글."
+            src={sns}
+            alt="소셜미디어."
             fill
             style={imageStyle}
           />

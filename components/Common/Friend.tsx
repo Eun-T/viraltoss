@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import consulting from '../../public/images/talk_consulting.png'
+import phone from '../../public/images/phone1.png'
 
 type Props = {};
 
@@ -22,7 +24,7 @@ const Friend = (props: Props) => {
               className="flex items-center px-[55px] py-[15px] l:px-[65px] l:py-[20px] rounded-[50px] bg-[#fcd94a] text-[#000300]"
             >
               <Image
-                src={"/images/talk_consulting.png"}
+                src={consulting}
                 alt="톡상담."
                 width={30}
                 height={30}
@@ -34,7 +36,7 @@ const Friend = (props: Props) => {
               className="flex gap-[5px] items-center px-[55px] py-[15px] l:px-[65px] l:py-[20px] rounded-[50px] bg-[#2a2626] text-[#fff] border-[2px]"
             >
               <Image
-                src={"/images/phone1.png"}
+                src={phone}
                 alt="전화하기."
                 width={24}
                 height={24}
