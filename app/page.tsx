@@ -4,6 +4,7 @@ import Header from "@/components/Common/Header";
 import Main from "@/components/Common/Main";
 import Service from "@/components/Common/Service";
 import Youtuber from "@/components/Common/Youtuber";
+import ContractChannelTalk from "@/components/Common/channelTalkService";
 import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Header/Nav";
 import { Metadata } from "next";
@@ -66,6 +67,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
+      <ContractChannelTalk />
       <Header />
       <Nav />
       <main>
