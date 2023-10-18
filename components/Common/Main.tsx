@@ -23,9 +23,10 @@ const Main = (props: Props) => {
               muted
               loop
               playsInline
+              preload="true"
               className="relative w-full h-full object-cover brightness-[.7]"
             >
-              <source src={"/movies/배경화면.mp4"} />
+              <source src={"/movies/back.mp4"} />
               배경화면 비디오
             </video>
           </div>
