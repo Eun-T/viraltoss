@@ -62,6 +62,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://viraltoss.com'
+  },
+  verification: {
+    google: 'ba9k7AZUfTXWoj4H6_pD9WtrnQWGYCDWnJMMJi51kmk',
   }
 };
 
