@@ -60,6 +60,9 @@ export const metadata: Metadata = {
       { url: "/favicon/apple-touch.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  alternates: {
+    canonical: 'https://viraltoss.com'
+  }
 };
 
 export default function Home() {

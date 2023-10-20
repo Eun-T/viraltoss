@@ -1,5 +1,4 @@
-User-Agent: *
+User-agent: *
 Allow: /
-Disallow:
 
-Sitemap: https://acme.com/sitemap.xml
+Sitemap: https://viraltoss.com/sitemap.xml
