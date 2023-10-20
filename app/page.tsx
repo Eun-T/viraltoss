@@ -13,7 +13,7 @@ import Head from "next/head";
 export const metadata: Metadata = {
   title: "바이럴토스",
   description:
-    "바이럴마케팅을 원하시나요? 카페,블로그,브랜드마케팅 그리고 컨설팅까지! 소규모 정예로 이루어진 전문가에게 맡기세요. 언제든지 연락만 주시면 바이럴토스는 고객님을 직접 찾아갑니다.",
+    "바이럴마케팅을 원하시나요? 카페, 블로그, 브랜드 마케팅부터 컨설팅까지! 소규모 정예로 구성된 전문가에게 맡기세요. 24시간 365일 상담 가능",
   openGraph: {
     title: "바이럴토스",
     description:
