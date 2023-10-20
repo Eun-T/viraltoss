@@ -20,6 +20,16 @@ const config: Config = {
         "real-screen": "calc(var(--vh) * 100)",
       },
       keyframes: {
+        fadeIn: {
+          from: {
+            opacity: '0',
+            transform: "translateY(100px)"
+          },
+          to: {
+            opacity: '3',
+            transform: "none"
+          }
+        },
         textShow: {
           "0%": { backgroundColor: "transparent" },
           "100%": { backgroundColor: "#4e5968" },
@@ -51,6 +61,7 @@ const config: Config = {
         imageUp: "imageUp .5s ease",
         imageDown: "imageDown .5s ease",
         barUp: "barUp .5s ease",
+        // fadeIn: "fadeIn .5s ease"
       },
     },
   },

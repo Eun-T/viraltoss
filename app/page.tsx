@@ -10,8 +10,6 @@ import Nav from "@/components/Header/Nav";
 import { Metadata } from "next";
 import Head from "next/head";
 
-
-
 export const metadata: Metadata = {
   title: "바이럴토스",
   description:
@@ -55,14 +53,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://viraltoss.com"),
   icons: {
     icon: [
-      { url: '/favicon/favi32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon/favi16.png', sizes: '16x16', type: 'image/png' },
+      { url: "/favicon/favi32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favi16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: '/favicon/apple-touch.png', sizes: '180x180', type: 'image/png' },
+      { url: "/favicon/apple-touch.png", sizes: "180x180", type: "image/png" },
     ],
-  }
-}
+  },
+};
 
 export default function Home() {
   return (

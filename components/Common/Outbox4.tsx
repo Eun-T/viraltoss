@@ -60,7 +60,7 @@ const Outbox4 = ({ isOpen, setOpen }: Outbox) => {
               이러한 분들을 위해 맞춤형 컨설팅으로 새로운 활기를 불어넣습니다.
               <br />그 방법은 다음과 같습니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               1. 객관적인 자료로 문제 해설
             </span>
             <h5 className="mb-[10px] l:mb-[7px]">
@@ -76,14 +76,14 @@ const Outbox4 = ({ isOpen, setOpen }: Outbox) => {
               필요할때가 있습니다. 결코 쉬운일은 아니지만 사람들이 맞춤 컨설팅을
               찾는 이유랍니다.
             </h5>
-            <span className="font-[600] text-[18px]">2. 새로운 수익 구조</span>
+            <span className="font-[200] text-[18px]">2. 새로운 수익 구조</span>
             <h5 className="mb-[10px] l:mb-[7px]">
               - 고객님의 채널을 면밀히 분석하여 광고 수익 외에도{" "}
               <span className="text-blue-400">새로운 비즈니스 모델</span>을
               찾아냅니다. 경제적인 안정감을 위해서는 다양한 수익 경로가
               필요합니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               3. 채널의 방향성을 잡아드립니다
             </span>
             <h5 className="">

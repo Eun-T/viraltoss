@@ -3,6 +3,8 @@
 import React, { useEffect } from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { jalnan } from "@/app/layout";
+import background_ from "../../public/images/배경화면_이미지.png"
+import Image from "next/image";
 
 type Props = {};
 
@@ -14,10 +16,11 @@ const Main = (props: Props) => {
 
   return (
     <section className="w-full relative" id="home">
-      <div className="relative v-[100vh] w-full">
+      <div className="relative h-[500px] max-w-full m:h-[100vh] w-full">
         {/* Image by Racool_studio*/}
         <div className="w-full h-[100vh]">
           <div className="relative w-full h-full">
+            <Image src={background_} alt="배경화면_이미지" fill/>
             <video
               autoPlay
               muted

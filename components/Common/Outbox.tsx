@@ -13,9 +13,6 @@ const imageStyle = {
   objectPosition: "center",
 } as React.CSSProperties;
 
-// 3. 솔직하고 정직하게
-// - 단점보다는 장점을 언급하는 것이 맞지만, 장점만 나열하면 글을 보러 들어온 이용자들은 광고라고 판단해서 뒤로 가기를 누릅니다. 장점과 단점을 섞어
-
 const Outbox = ({ isOpen, setOpen }: Outbox) => {
   // 모달 열릴 때
   useEffect(() => {
@@ -36,7 +33,7 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
           setOpen(false);
         }}
       ></div>
-      {/* border-[15px] border-black box-border */}
+
       <div
         className="bg-white overflow-y-scroll h-[400px] s:h-[555px] l:h-fit w-[768px] l:w-[1100px] relative z-10 rounded-[30px] px-[30px] py-[30px] flex l:flex-row flex-col"
         id="outbox"
@@ -60,7 +57,7 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
               그러나 마케팅의 효과를 극대화하려면 어떻게 해야 할까요?
               바이럴토스는 다음과 같은 방법으로 작업을 진행합니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               1. 절대로 외부업제를 사용하지 않습니다
             </span>
             <h5 className="mb-[10px] l:mb-[5px]">
@@ -76,7 +73,7 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
               과정을 상세히 설명하고 질의응답 시간을 가집니다.
               <br />
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               2. 템플릿과 형식을 활용합니다
             </span>
             <h5 className="mb-[10px] l:mb-[5px]">
@@ -88,7 +85,7 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
               결과적으로 깔끔하고 눈에 띄는 글을 작성할 수 있습니다.
               <br />
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               3. 노하우를 드립니다.
             </span>
             <h5>
@@ -121,10 +118,10 @@ const Outbox = ({ isOpen, setOpen }: Outbox) => {
 
 export default Outbox;
 
-const data = [
-  "네이버 파워링크/스마트플레이스란?",
-  "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
-];
+// const data = [
+//   "네이버 파워링크/스마트플레이스란?",
+//   "파워링크는 네이버 상단에 노출되는 광고상품이고 스마트플레이스란 업체를 효과적으로",
+// ];
 
 // 1. 지속적인 포스팅
 // - 아무리 이웃과 조회수가 많더라도 지속적인 포스팅이 뒷받침되지 않으면 광고효과를 기대하기 어렵습니다.

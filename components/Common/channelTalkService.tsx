@@ -16,7 +16,7 @@ const secretKey =
   "b5f8c8064ce7c19f15d140eb49cf9540bb8f9f95674134510c9110fc0024c1ed";
 const expectedHash =
   "99427c7bba36a6902c5fd6383f2fb0214d19b81023296b4bd6b9e024836afea2";
-
+const access_secret = "1f93e4b97950e6f65178f26af7a30c3d"
 const hash = crypto
   .createHmac("sha256", Buffer.from(secretKey, "hex"))
   .update(memberId)
@@ -30,7 +30,7 @@ function ContractChannelTalk() {
       pluginKey: CHANNEL_TALK_PLUGIN_KEY,
       memberId: memberId, // fill user's member id
       profile: {
-        name: "USER_NAME", // fill user's name
+        name: "고객님", // fill user's name
         mobileNumber: "USER_MOBILE_NUMBER", // fill user's mobile number
         landlineNumber: "USER_LANDLINE_NUMBER", // fill user's landline number
         CUSTOM_VALUE_1: "VALUE_1", // custom property

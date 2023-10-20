@@ -61,23 +61,23 @@ const Outbox3 = ({ isOpen, setOpen }: Outbox) => {
                 &nbsp;그렇다면 바이럴토스는 SNS 마케팅을 어떻게 활용할까요?
               </span>
             </h5>
-            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+            <span className="font-[200] text-[18px] inline-block mb-[7px]">
               - 유명 인플루언서와 협업을 통한 마케팅
             </span>
             <br />
-            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+            <span className="font-[200] text-[18px] inline-block mb-[7px]">
               - 브랜드 채널 개설 및 운영
             </span>
             <br />
-            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+            <span className="font-[200] text-[18px] inline-block mb-[7px]">
               - 고객님의 SNS 계정 관리
             </span>
             <br />
-            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+            <span className="font-[200] text-[18px] inline-block mb-[7px]">
               - 페이스북 파워페이지 고정 및 인스타그램 피드 포스팅
             </span>
             <br />
-            <span className="font-[600] text-[18px] inline-block mb-[7px]">
+            <span className="font-[200] text-[18px] inline-block mb-[7px]">
               - 인스타그램, 페이스북 등 SNS 자체 광고를 위한 사진 촬영 및 편집
             </span>
             <br />

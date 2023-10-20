@@ -59,20 +59,20 @@ const Outbox5 = ({ isOpen, setOpen }: Outbox) => {
               가져야 홍보 효과가 배 이상 발생합니다. 그래서 바이럴토스는 다음과
               같은 방법으로 작업을 진행합니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               1. 고객님의 영상으로 네티즌들의 이목을 끌 수 있는 짤들을 만듭니다.
             </span>
             <h5 className="mb-[7px]">
               - 일단 협의를 통해 커뮤니티에 올릴 유튜브 영상을 선택합니다. 그
               이후에 영상을 한땀한땀 캡쳐하고 이어붙여 짤을 제작합니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               2. 이중에서 원하는 짤을 고객님이 직접 선택합니다.
             </span>
             <h5 className="mb-[7px]">
               - 충분한 논의 끝에 하나를 선정하시면 됩니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               3. 그것을 토스만의 노하우를 사용하여 인기글 게시판에 노출시킵니다.
             </span>
             <h5 className="mb-[7px]">

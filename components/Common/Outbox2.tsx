@@ -58,13 +58,13 @@ const Outbox2 = ({ isOpen, setOpen }: Outbox) => {
               선택이 아닌 필수가 되는거죠 그렇다면 바이럴토스는 어떻게 업무를
               진행할까요?
             </h5>
-            <span className="font-[600] text-[18px]">1. 마케팅 용어 설명</span>
+            <span className="font-[200] text-[18px]">1. 마케팅 용어 설명</span>
             <h5 className="mb-[10px] l:mb-[7px]">
               - 네이버 마케팅에서 사용되는 용어들인{" "}
               <span className="text-blue-500"> CPC, 키워드, 입찰가 등</span>을
               간단하고 이해하기 쉽게 설명해 드립니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               2. 최적의 키워드를 사용
             </span>
             <h5 className="mb-[10px] l:mb-[7px]">
@@ -78,7 +78,7 @@ const Outbox2 = ({ isOpen, setOpen }: Outbox) => {
               을 조합하여 광고 효과를 극대화합니다. <br />
               또한 경쟁사의 중복/악성클릭에 대한 설명과 해결방안을 제공합니다.
             </h5>
-            <span className="font-[600] text-[18px]">
+            <span className="font-[200] text-[18px]">
               3. 세팅 이후 대행사 없이 직접 운영하는 법
             </span>
             <h5 className="">
@@ -97,7 +97,7 @@ const Outbox2 = ({ isOpen, setOpen }: Outbox) => {
               마지막으로, 대행사를 통하지 않고 직접 운영하고 관리하는 방법에
               대한 안내도 제공합니다.
             </h5>
-            <span className="font-[600] text-[18px]"></span>
+            <span className="font-[200] text-[18px]"></span>
           </div>
         </div>
         <div className="hidden w-[40%] relative l:flex items-center">
