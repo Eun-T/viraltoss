@@ -8,6 +8,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
 import v4 from '../../public/images/바이럴토스 (4).svg'
 import v3 from '../../public/images/바이럴토스 (3).svg'
+import logowhite from '../../public/images/logo-white.svg'
+import logoblack from '../../public/images/logo-black.svg'
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -36,7 +38,7 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  //bg-[#f4f4f4]
   return (
     <header>
       <nav
@@ -57,12 +59,12 @@ const Nav = () => {
               <Image
                 src={
                   scrolled
-                    ? v4
-                    : v3
+                    ? logoblack
+                    : logowhite
                 }
-                width={100}
+                width={150}
                 height={0}
-                style={{ width: "100px", height: "auto" }}
+                style={{ width: "180px", height: "auto" }}
                 alt={"바이럴토스"}
               />
             </a>

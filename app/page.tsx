@@ -11,7 +11,7 @@ import { Metadata } from "next";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "바이럴토스",
+  title: "바이럴토스 - 바이럴마케팅 전문 업체",
   description:
     "바이럴마케팅을 원하시나요? 카페, 블로그, 브랜드 마케팅부터 컨설팅까지! 소규모 정예로 구성된 전문가에게 맡기세요. 24시간 365일 상담 가능",
   openGraph: {
@@ -52,12 +52,29 @@ export const metadata: Metadata = {
   category: "marketing",
   metadataBase: new URL("https://viraltoss.com"),
   icons: {
+    // icon: [
+    //   { url: "/favicon/favi32.png", sizes: "32x32", type: "image/png" },
+    //   { url: "/favicon/favi16.png", sizes: "16x16", type: "image/png" },
+    // ],
+    // apple: [
+    //   { url: "/favicon/apple-touch.png", sizes: "180x180", type: "image/png" },
+    // ],
     icon: [
-      { url: "/favicon/favi32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon/favi16.png", sizes: "16x16", type: "image/png" },
+      // { url: "/favicon/fff.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: "/favicon/apple-touch.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon/apple180.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon/apple152.png", sizes: "152x152", type: "image/png" },
+      { url: "/favicon/apple144.png", sizes: "144x144", type: "image/png" },
+      { url: "/favicon/apple120.png", sizes: "120x120", type: "image/png" },
+      { url: "/favicon/apple114.png", sizes: "114x114", type: "image/png" },
+      { url: "/favicon/apple76.png", sizes: "76x76", type: "image/png" },
+      { url: "/favicon/apple72.png", sizes: "72x72", type: "image/png" },
+      { url: "/favicon/apple60.png", sizes: "60x60", type: "image/png" },
+      { url: "/favicon/apple57.png", sizes: "57x57", type: "image/png" },
     ],
   },
   alternates: {
