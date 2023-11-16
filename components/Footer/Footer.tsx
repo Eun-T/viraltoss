@@ -12,7 +12,7 @@ const Footer = (props: Props) => {
           <ul className="flex flex-col gap-[8px] text-[12px]">
             <li>회사명 : 바이럴토스</li>
             <li>대표 : 김은태</li>
-            <li>전화번호: 010-3981-4325</li>
+            <li>전화번호: 010-5578-7956</li>
             <li>이메일주소 : viraltoss@naver.com</li>
             <li>카톡아이디 : 바이럴토스</li>
           </ul>

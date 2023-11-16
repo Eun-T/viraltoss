@@ -4,6 +4,7 @@ import Friend from "@/components/Common/Friend";
 import Header from "@/components/Common/Header";
 import Main from "@/components/Common/Main";
 import Service from "@/components/Common/Service";
+import Telephone from "@/components/Common/Telephone";
 import Youtuber from "@/components/Common/Youtuber";
 import ContractChannelTalk from "@/components/Common/channelTalkService";
 import Footer from "@/components/Footer/Footer";
@@ -100,6 +101,7 @@ export default function Home() {
       <ContractChannelTalk />
       <Header />
       <Nav />
+      <Telephone />
       <main>
         <Main />
         <Service />

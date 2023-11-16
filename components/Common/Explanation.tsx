@@ -74,7 +74,7 @@ const Explanation = (props: Props) => {
               <h3 className="inline-block text-[16px] s:text-[20px] m:text-[26px] l:text-[32px] bg-white p-[15px] m:p-[20px] rounded-[24px] mb-[25px] s:mb-[40px]">
                 2. <span className="text-green-500">문자</span> 또는{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-700">
-                  카카오톡
+                  채널톡
                 </span>
                 을 통해 언제든지 문의하실 수 있습니다.
               </h3>
