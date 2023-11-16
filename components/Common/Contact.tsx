@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { MdArrowDropDown } from "react-icons/md";
+// import { useRouter } from "next/navigation";
 
 
 const Contact = () => {
+  // const router = useRouter()
   const [data, setData] = useState({
     senderEmail: "",
     message: "",
@@ -50,6 +52,8 @@ const Contact = () => {
       });
       setTimeout(() => {
         location.reload();
+        window.scrollTo(0,-100)
+        // router.reload()
       }, 3500);
     } else {
       // failNotify();
@@ -96,7 +100,7 @@ const Contact = () => {
             <div className="">
               <label
                 htmlFor="message"
-                className="text-[16px] s:text-[18px] mb-[5px] block ml-[2px]"
+                className="text-[15px] s:text-[18px] mb-[5px] block ml-[2px]"
               >
                 <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
                 성함 / 상호명
@@ -104,7 +108,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="message"
-                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[1px] m:border-[2px] border-[#676363] outline-[1px] m:outline-[2px] outline-[#3182F6]"
                 placeholder="홍길동 / 바이럴토스"
                 minLength={1}
                 onChange={(e) => {
@@ -118,7 +122,7 @@ const Contact = () => {
             <div className="">
               <label
                 htmlFor="number"
-                className="text-[16px] s:text-[18px] mb-[5px] block ml-[2px]"
+                className="text-[15px] s:text-[18px] mb-[5px] block ml-[2px]"
               >
                 <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
                 연락처
@@ -126,7 +130,7 @@ const Contact = () => {
               <input
                 type="tel"
                 name="number"
-                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[1px] m:border-[2px] border-[#676363] outline-[1px] m:outline-[2px] outline-[#3182F6]"
                 placeholder="01012345678"
                 onChange={(e) => {
                   setData((prevData) => ({
@@ -139,7 +143,7 @@ const Contact = () => {
             <div className="">
               <label
                 htmlFor="senderEmail"
-                className="text-[16px] s:text-[18px] mb-[5px] block ml-[2px]"
+                className="text-[15px] s:text-[18px] mb-[5px] block ml-[2px]"
               >
                 <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
                 이메일
@@ -147,7 +151,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="senderEmail"
-                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[1px] m:border-[2px] border-[#676363] outline-[1px] m:outline-[2px] outline-[#3182F6]"
                 placeholder="abcde@naver.com"
                 onChange={(e) => {
                   setData((prevData) => ({
@@ -161,7 +165,7 @@ const Contact = () => {
             <div className="">
               <label
                 htmlFor="content"
-                className="text-[16px] s:text-[18px] mb-[5px] block ml-[2px]"
+                className="text-[15px] s:text-[18px] mb-[5px] block ml-[2px]"
               >
                 <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
                 문의 내용
@@ -169,7 +173,7 @@ const Contact = () => {
               <textarea
                 name="content"
                 placeholder="문의 내용(500자 이내)"
-                className="resize-none w-full rounded-[10px] px-[15px] py-[10px] text-[16px] h-[160px] s:h-[180px] m:h-[200px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                className="resize-none w-full rounded-[10px] px-[15px] py-[10px] text-[16px] h-[160px] s:h-[180px] m:h-[200px] border-[1px] m:border-[2px] border-[#676363] outline-[1px] m:outline-[2px] outline-[#3182F6]"
                 onChange={(e) => {
                   setData((prevData) => ({
                     ...prevData,
@@ -183,7 +187,7 @@ const Contact = () => {
               <div className="flex items-center mb-[5px]">
                 <label
                   htmlFor="senderEmail"
-                  className="text-[16px] s:text-[18px] block ml-[2px] mr-[7px]"
+                  className="text-[15px] s:text-[18px] block ml-[2px] mr-[7px]"
                 >
                   <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
                   개인정보 수집 및 이용 동의에 동의합니다.
@@ -194,7 +198,7 @@ const Contact = () => {
                   className="w-[16px] h-[16px]"
                 />
               </div>
-              <div className="w-full h-[89px] m:h-[113px] bg-white overflow-y-auto rounded-[10px] p-[10px] break-keep border-[2px] border-[#676363]">
+              <div className="w-full h-[86px] m:h-[113px] bg-white overflow-y-auto rounded-[10px] p-[8px] s:p-[10px] break-keep border-[1px] m:border-[2px] border-[#676363]">
                 개인정보의 수집 및 이용목적 본 사이트는 온라인(상담)문의를
                 이용하는 기업 및 개인을 대상으로 아래와 같이 개인정보를 수집하고
                 있습니다.
