@@ -1,0 +1,153 @@
+import React, { useEffect } from "react";
+import { sendEmail } from "./SendEmail";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { redirect, permanentRedirect } from "next/navigation";
+import { MdArrowDropDown } from "react-icons/md";
+
+const Email = () => {
+  // const notify = () => toast('toastify test!')
+  return (
+    <>
+      <ToastContainer
+        position="top-right" // 알람 위치 지정
+        autoClose={3000} // 자동 off 시간
+        hideProgressBar={false} // 진행시간바 숨김
+        closeOnClick // 클릭으로 알람 닫기
+        rtl={false} // 알림 좌우 반전
+        pauseOnFocusLoss // 화면을 벗어나면 알람 정지
+        draggable // 드래그 가능
+        pauseOnHover // 마우스를 올리면 알람 정지
+        theme="light"
+        // limit={1} // 알람 개수 제한
+      />
+      <section className="w-full bg-[url('/images/우주.jpg')] bg-no-repeat bg-cover flex flex-col justify-center items-center pt-[80px] pb-[100px]">
+        <h2 className="text-white text-[60px] font-[700] mb-[25px]">
+          간편 상담 신청
+        </h2>
+        <h3 className="text-white text-[20px] text-center mb-[10px] leading-snug">
+          상담 글을 작성해주시면 확인 후 순차적으로 연락드립니다.
+          <br />
+          급하신 경우, 전화 상담이나 채널톡 상담을 이용해주세요
+        </h3>
+        <MdArrowDropDown className="text-white text-[60px]" />
+        <div className="w-[600px] bg-white p-[50px] rounded-[20px] mt-[10px]">
+          <form
+            // onSubmit={() => toast('toastify test!')}
+            action={async (formData) => {
+              "use server";
+              await sendEmail(formData);
+              // () => toast('toastify test!')
+            }}
+            className="flex flex-col gap-[18px]"
+          >
+            <div className="">
+              <label
+                htmlFor="message"
+                className="text-[18px] mb-[5px] block ml-[2px]"
+              >
+                <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
+                성함 / 상호명
+              </label>
+              <input
+                type="text"
+                name="message"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                placeholder="홍길동 / 바이럴토스"
+              />
+            </div>
+            <div className="">
+              <label
+                htmlFor="number"
+                className="text-[18px] mb-[5px] block ml-[2px]"
+              >
+                <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
+                연락처
+              </label>
+              <input
+                type="tel"
+                name="number"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                placeholder="01012345678"
+              />
+            </div>
+            <div className="">
+              <label
+                htmlFor="senderEmail"
+                className="text-[18px] mb-[5px] block ml-[2px]"
+              >
+                <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
+                이메일
+              </label>
+              <input
+                type="email"
+                name="senderEmail"
+                className="w-full h-[50px] rounded-[10px] px-[15px] text-[16px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+                placeholder="abcde@naver.com"
+              />
+            </div>
+
+            <div className="">
+              <label
+                htmlFor="content"
+                className="text-[18px] mb-[5px] block ml-[2px]"
+              >
+                <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
+                문의 내용
+              </label>
+              <textarea
+                name="content"
+                placeholder="문의 내용(500자 이내)"
+                className="resize-none w-full rounded-[10px] px-[15px] py-[10px] text-[16px] h-[200px] border-[2px] border-[#676363] outline-[2px] outline-[#3182F6]"
+              />
+            </div>
+
+            <div className="mb-[10px]">
+              <div className="flex items-center mb-[5px]">
+                <label
+                  htmlFor="senderEmail"
+                  className="text-[18px] block ml-[2px] mr-[7px]"
+                >
+                  <i className="w-[5px] h-[5px] rounded-[50px] bg-red-500 align-[2px] inline-block mr-[8px]"></i>
+                  개인정보 수집 및 이용 동의에 동의합니다.
+                </label>
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  className="w-[16px] h-[16px]"
+                />
+              </div>
+              <div className="w-full h-[113px] bg-white overflow-y-auto rounded-[10px] p-[10px] break-keep border-[2px] border-[#676363]">
+                개인정보의 수집 및 이용목적 본 사이트는 온라인(상담)문의를
+                이용하는 기업 및 개인을 대상으로 아래와 같이 개인정보를 수집하고
+                있습니다.
+                <br /> 1. 수집 개인정보 항목 - 상호, 성함, 연락처, 이메일,
+                문의내용
+                <br /> 2. 개인정보의 수집 및 이용목적 - 상담 및 문의내용에 대한
+                확인 및 회신
+                <br /> 3. 개인정보의 보유 및 이용기간 - 목적달성 시점까지 이용 *
+                목적 이외의 타 용도로는 사용되지 않습니다.
+                <br /> 4. 이외 사항은 개인정보취급방침을 준수합니다.
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full h-[60px] rounded-[10px] bg-[#3182F6] text-[18px] text-white"
+            >
+              상담 신청하기
+              {/* 
+              망설이지 마시고, 지금 문의하세요
+              망설이지 마시고 지금 조언을 구해보십시오. 전문가들이 직접 도와드립니다.
+              상담은 사전 예약제로 진행됩니다.
+편하신 방법으로 문의 남겨 주시면 확인 후 연락 드리겠습니다.
+            */}
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Email;

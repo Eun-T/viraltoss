@@ -6,10 +6,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseOutline } from "react-icons/io5";
-import v4 from '../../public/images/바이럴토스 (4).svg'
-import v3 from '../../public/images/바이럴토스 (3).svg'
-import logowhite from '../../public/images/logo-white.svg'
-import logoblack from '../../public/images/logo-black.svg'
+import logowhite1 from '../../public/images/logowhite1.svg'
+import logoblack1 from '../../public/images/logoblack1.svg'
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -59,12 +57,12 @@ const Nav = () => {
               <Image
                 src={
                   scrolled
-                    ? logoblack
-                    : logowhite
+                    ? logoblack1
+                    : logowhite1
                 }
                 width={150}
                 height={0}
-                style={{ width: "180px", height: "auto" }}
+                style={{ width: "150px", height: "auto" }}
                 alt={"바이럴토스"}
               />
             </a>
