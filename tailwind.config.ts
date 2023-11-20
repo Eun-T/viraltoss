@@ -12,13 +12,7 @@ const config: Config = {
       m: "768px",
       l: "1024px",
     },
-    minHeight: {
-      "real-screen": "calc(var(--vh) * 100)",
-    },
     extend: {
-      height: {
-        "real-screen": "calc(var(--vh) * 100)",
-      },
       keyframes: {
         fadeIn: {
           from: {
